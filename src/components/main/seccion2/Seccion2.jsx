@@ -17,7 +17,7 @@ const Seccion2 = () => {
                 src={images.remera1}
                 alt="remera1"
               />
-            
+            <img src={images.logo} alt="logo" id="image-logo" />
           </label>
           <label className="card" for="item-2" id="selector-2">
            
@@ -25,7 +25,7 @@ const Seccion2 = () => {
                src={images.remera2}
                 alt="remera2"
               />
-           
+           <img src={images.logo} alt="logo" id="image-logo" />
           </label>
 
           <label className="card" for="item-3" id="selector-3">
@@ -34,7 +34,7 @@ const Seccion2 = () => {
                src={images.remera3}
                 alt="remera3"
               />
-           
+           <img src={images.logo} alt="logo" id="image-logo" />
           </label>
         </div>
       </div>

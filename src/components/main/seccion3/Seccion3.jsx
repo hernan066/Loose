@@ -20,7 +20,7 @@ export const Seccion3 = () => {
             
             <div className="seccion__image-container">
 
-            <img src={images.remera3} alt="" />
+            <img src={images.remera4} alt="" />
             </div>
             
             

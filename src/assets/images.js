@@ -2,8 +2,10 @@ import banner from './img/banner/banner.jpeg';
 import remera1 from './img/remeras/remera1.jpg';
 import remera2 from './img/remeras/remera2.jpg';
 import remera3 from './img/remeras/remera3.jpg';
+import remera4 from './img/remeras/remera4.jpg';
 import blanca from './img/productos/blanca.jpeg';
 import negra from './img/productos/negra.jpeg';
+import logo from './img/logos/LooseB.png';
 
 
 // eslint-disable-next-line import/no-anonymous-default-export
@@ -12,7 +14,9 @@ export default {
     remera1,
     remera2,
     remera3,
+    remera4,
     blanca,
     negra,
+    logo
    
 }
