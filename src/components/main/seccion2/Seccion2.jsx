@@ -5,13 +5,13 @@ const Seccion2 = () => {
   return (
     <div className="container__slider">
       <div className="container">
-        <input type="radio" name="slider" id="item-1" checked />
+        <input type="radio" name="slider" id="item-1" defaultChecked />
         <input type="radio" name="slider" id="item-2" />
         <input type="radio" name="slider" id="item-3" />
-        <div class="cards">
+        <div className="cards">
          {/*  <div className="slider__squat"></div> */}
           
-          <label className="card" for="item-1" id="selector-1">
+          <label className="card" htmlFor="item-1" id="selector-1">
            
               <img
                 src={images.remera1}
@@ -19,7 +19,7 @@ const Seccion2 = () => {
               />
             <img src={images.logo} alt="logo" id="image-logo" />
           </label>
-          <label className="card" for="item-2" id="selector-2">
+          <label className="card" htmlFor="item-2" id="selector-2">
            
               <img
                src={images.remera2}
@@ -28,7 +28,7 @@ const Seccion2 = () => {
            <img src={images.logo} alt="logo" id="image-logo" />
           </label>
 
-          <label className="card" for="item-3" id="selector-3">
+          <label className="card" htmlFor="item-3" id="selector-3">
             
               <img
                src={images.remera3}
