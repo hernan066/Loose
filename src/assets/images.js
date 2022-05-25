@@ -1,0 +1,18 @@
+import banner from './img/banner/banner.jpeg';
+import remera1 from './img/remeras/remera1.jpg';
+import remera2 from './img/remeras/remera2.jpg';
+import remera3 from './img/remeras/remera3.jpg';
+import blanca from './img/productos/blanca.jpeg';
+import negra from './img/productos/negra.jpeg';
+
+
+// eslint-disable-next-line import/no-anonymous-default-export
+export default {
+    banner,
+    remera1,
+    remera2,
+    remera3,
+    blanca,
+    negra,
+   
+}

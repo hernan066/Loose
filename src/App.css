@@ -1,0 +1,13 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --black-color: #060606;
+    --white-color: #efedee;
+    --primary-color: #ea5923;
+    --font-1: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-2: 'Oswald', sans-serif;
+  }
