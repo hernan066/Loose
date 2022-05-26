@@ -10,17 +10,20 @@ const Seccion4 = () => {
         
         <div className="seccion4__card">
           <div className="seccion4__card-image">
-            <img src={images.blanca} alt="logo" />
+           
+           {/* agregar imagen aca */}
+            <img src={images.blanca} alt="remera blanca" />
+          
           </div>
         </div>
         <div className="seccion4__card">
           <div className="seccion4__card-image">
-            <img src={images.negra} alt="logo" />
+            <img src={images.negra} alt="remera negra" />
           </div>
         </div>
         <div className="seccion4__card">
           <div className="seccion4__card-image">
-            <img src="http://vision.centroculturadigital.mx/media/done/1550616316563-QR-GlosarioCCD-cont.png" alt="logo" />
+            <img src="http://vision.centroculturadigital.mx/media/done/1550616316563-QR-GlosarioCCD-cont.png" alt="logo qr" />
           </div>
         </div>
      
