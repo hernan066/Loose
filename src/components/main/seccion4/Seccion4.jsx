@@ -10,15 +10,12 @@ const Seccion4 = () => {
         
         <div className="seccion4__card">
           <div className="seccion4__card-image">
-           
-           {/* agregar imagen aca */}
-            <img src={images.blanca} alt="remera blanca" />
-          
+            <img src={images.remeraBlanca} alt="remera blanca" />
           </div>
         </div>
         <div className="seccion4__card">
           <div className="seccion4__card-image">
-            <img src={images.negra} alt="remera negra" />
+            <img src={images.remeraNegra} alt="remera negra" />
           </div>
         </div>
         <div className="seccion4__card">

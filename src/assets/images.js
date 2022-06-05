@@ -6,7 +6,8 @@ import remera4 from './img/remeras/remera4.jpg';
 import blanca from './img/productos/blanca.jpeg';
 import negra from './img/productos/negra.jpeg';
 import logo from './img/logos/LooseB.png';
-
+import remeraBlanca from "./img/productos/RemeraEze.png"
+import remeraNegra from "./img/productos/RemeraEze2.png"
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
@@ -17,6 +18,8 @@ export default {
     remera4,
     blanca,
     negra,
-    logo
+    logo,
+    remeraNegra,
+    remeraBlanca
    
 }
