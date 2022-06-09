@@ -1,6 +1,6 @@
 # Tienda online Loose
 
-Este proyecto fue iniciado con Vitte.
+Este proyecto fue iniciado con Vite.
 
 ## Clonando el proyecto:
 
