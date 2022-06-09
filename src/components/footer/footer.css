@@ -4,5 +4,14 @@
     background-color: var(--black-color);
 }
 
+.sobreNosotros{
+    color: rgb(224, 155, 155);
+
+}
+#sobreNosotrosTitulo{
+    color: rgb(255, 3, 129);
+    font-weight: 1000;
+}
+
 /* css de meli */
 

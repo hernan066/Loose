@@ -5,9 +5,12 @@ const Footer = () => {
     <footer className='footer__container'>
         
         
-        Footer
-       {/*  Reemplazar todo el codigo por el de Meli */}
-       {/* holaaaa */}
+    <div className='sobreNosotros'> 
+    <p id='sobreNosotrosTitulo'>SOBRE NOSOTROS</p>  
+    <p>Blablablablablablablballablablablablablablablbalb.</p>  
+    </div>
+     
+      
 
 
 
