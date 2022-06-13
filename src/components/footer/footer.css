@@ -17,13 +17,13 @@
     color: bisque;
 }
 #sobre_nosotros{
-    background-color: aquamarine;
+    background-color: rgb(17, 48, 37);
     order: 1;
     width: 33%;
     
 }
 #iconos{
-    background-color: brown;
+    background-color: rgb(37, 16, 16);
     order: 2;
     width: 33%;
 }
