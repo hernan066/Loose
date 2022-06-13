@@ -7,14 +7,20 @@
     flex-wrap: wrap;
 }
 #locales{
-    background-color: blueviolet;
+    background-color: rgb(0, 0, 0);
     order: 0;
     width: 33%;
+   
+    font-size: medium;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    color: bisque;
 }
 #sobre_nosotros{
     background-color: aquamarine;
     order: 1;
     width: 33%;
+    
 }
 #iconos{
     background-color: brown;
