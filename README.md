@@ -17,7 +17,7 @@ Este proyecto fue iniciado con Vite.
 Corre la app en development mode.\
 Abrir [http://localhost:3000](http://localhost:3000) para ver en el navegador.
 
-#### Agragando develop
+#### Agregando develop
 
 
 
