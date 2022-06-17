@@ -1,4 +1,6 @@
 import banner from './img/banner/banner.jpeg';
+import banner1 from './img/banner/banner1.svg';
+import banner2 from './img/banner/banner2.svg';
 import remera1 from './img/remeras/remera1.jpg';
 import remera2 from './img/remeras/remera2.jpg';
 import remera3 from './img/remeras/remera3.jpg';
@@ -12,6 +14,8 @@ import remeraNegra from "./img/productos/RemeraEze2.png"
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
     banner,
+    banner1,
+    banner2,
     remera1,
     remera2,
     remera3,
