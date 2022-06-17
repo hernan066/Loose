@@ -24,6 +24,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
  }
  .seccion1__img2_contanier{
   
@@ -61,7 +62,7 @@
   position: absolute;
   z-index: 2;
   left: 10%;
-  text-shadow: 0 0 2px #111;
+  text-shadow: 0 0 5px #111;
  }
  .seccion1__text2.iam{
   bottom:20vh;
