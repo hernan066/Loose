@@ -8,6 +8,9 @@ import remera3 from './img/remeras/remera3.jpg';
 import remera4 from './img/remeras/remera4.jpg';
 import blanca from './img/productos/blanca.jpeg';
 import negra from './img/productos/negra.jpeg';
+import qr from './img/productos/qr.jpg';
+import capsula from './img/productos/capsula.jpg';
+
 import logo from './img/logos/LooseB.png';
 import remeraBlanca from "./img/productos/RemeraEze.png"
 import remeraNegra from "./img/productos/RemeraEze2.png"
@@ -22,6 +25,8 @@ export default {
     remera2,
     remera3,
     remera4,
+    qr,
+    capsula,
     blanca,
     negra,
     logo,

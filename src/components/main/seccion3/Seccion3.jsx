@@ -42,7 +42,7 @@ export const Seccion3 = () => {
       <div className="seccion__image">
         
         <div className="seccion__image-container" ref={container}>
-         {/*  <img src={images.remera4} alt="" /> */}
+         
          <div className="seccion__image_square-bg"></div>
           <div className="seccion__image_square"></div>  
         </div>
