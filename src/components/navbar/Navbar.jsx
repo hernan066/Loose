@@ -2,8 +2,13 @@ import "./navbar.css";
 import images from "../../assets/images";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 const Navbar = () => {
+  
+  const [hamburgerIcon, setHamburgerIcon] = useState(false);
+  
+  
   return (
     <nav className="nav">
       <div className="nav__container">
@@ -24,6 +29,7 @@ const Navbar = () => {
         </div>
 
         <motion.ul
+        className="nav__list"
           initial={{ opacity: 0, x: 100 }}
           animate={{
             opacity: 1,
@@ -45,6 +51,15 @@ const Navbar = () => {
             <a href="#">QR</a>
           </li>
         </motion.ul>
+        <div
+              className={`hamburger ${hamburgerIcon ? "is-active" : ""}`}
+              id="hamburger-1"
+              onClick={() => setHamburgerIcon(!hamburgerIcon)}
+            >
+              <span className="line"></span>
+              <span className="line"></span>
+              <span className="line"></span>
+            </div>
       </div>
     </nav>
   );

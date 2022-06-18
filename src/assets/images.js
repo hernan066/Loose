@@ -1,4 +1,5 @@
 import banner from './img/banner/banner.jpeg';
+import banner1_mobile from './img/banner/banner1_mobile.svg';
 import banner1 from './img/banner/banner1.svg';
 import banner2 from './img/banner/banner2.svg';
 import remera1 from './img/remeras/remera1.jpg';
@@ -15,6 +16,7 @@ import remeraNegra from "./img/productos/RemeraEze2.png"
 export default {
     banner,
     banner1,
+    banner1_mobile,
     banner2,
     remera1,
     remera2,
