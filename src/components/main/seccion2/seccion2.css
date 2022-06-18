@@ -158,3 +158,8 @@ input[type="radio"] {
     height: auto;
   }
 }
+@media screen and (max-width: 1400px){
+  .container__slider h1{
+    display: none;
+  }
+}

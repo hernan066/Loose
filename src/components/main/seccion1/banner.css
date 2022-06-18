@@ -2,7 +2,12 @@
   width: 100%;
   height: 87vh;
   display: flex;
+  overflow: hidden;
+  
  }
+ .seccion1__container::-webkit-scrollbar {
+   display: none;
+  }
  .seccion1__left{
   width: 60%;
   height: 100%;
@@ -25,6 +30,12 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
+ }
+ .seccion1__img1_contanier img{
+   width: 100%;
+ }
+ .seccion1__img2_contanier img{
+   width: 100%;
  }
  .seccion1__img2_contanier{
   
@@ -69,6 +80,19 @@
  }
  .seccion1__text2.loose{
   bottom:5vh;
+ }
+ @media screen and (max-width: 1400px){
+  .seccion1__text{
+  font-size: 7.5rem;
+  }
+  .seccion1__img2_contanier{
+    width: 55%;
+   
+  }
+  .seccion1__text2{
+    font-size: 4rem;
+    }
+   
  }
 
 

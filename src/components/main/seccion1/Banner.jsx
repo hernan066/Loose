@@ -22,17 +22,22 @@ export const Banner = () => {
         </div>
         <div className="seccion1__right">
           <div className="seccion1__img2_contanier">
-          <span 
+          <motion.span 
           className="seccion1__text2 iam"
-          initial={{ color: "black" }}
-          animate={{ color: "white", transition: { duration: 1, delay:1.2 } }}
+          initial={{ x: 700 }}
+          animate={{ x: 0, transition: { duration: 1, delay:1.2 } }}
 
            /* revisar para cambiar de color */
 
           >
             I{"`"}m
-            </span>
-          <span className="seccion1__text2 loose">Loose</span>
+            </motion.span>
+          <motion.span 
+          className="seccion1__text2 loose"
+          initial={{ x: 700 }}
+          animate={{ x: 0, transition: { duration: 1, delay:1.2 } }}
+          
+          >Loose</motion.span>
             <motion.img 
             src={images.banner2} 
             alt="banner" 
