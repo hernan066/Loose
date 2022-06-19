@@ -13,7 +13,7 @@ const Seccion2 = () => {
         variants={scrollAnimateUp}
         className="seccion2__title"
       >
-        I'm LOOSE
+        Seguinos en <a href="https://www.instagram.com/looseqr" target="blank"> Instagram</a>
       </motion.h2>
       <div className="container__slider">
         <motion.div

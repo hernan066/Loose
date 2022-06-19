@@ -4,15 +4,22 @@
 
 
 .seccion2__title{
-  text-transform: uppercase;
+  
   font-family: var(--font-2);
   letter-spacing: 5px;
   font-size: 5rem;
  
   color: var(--white-color);
   text-align: center;
-  padding-top: 10px;
+  padding-top: 30px;
+  padding-bottom: 30px;
  
+}
+.seccion2__title a{
+  text-shadow: 3px 3px 10px purple, -2px -2px 10px cyan;
+  color: var(--white-color);
+  text-decoration: none;
+  cursor: pointer;
 }
 
 
