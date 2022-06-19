@@ -57,7 +57,7 @@
   border: 2px solid #ec5928;
   color: #ec5928;
   background-color: #fff;
-  transition: all 0.3s ease-in-out;
+  transition: hover 0.3s ease-in-out;
   font-size: var(--font-2);
   cursor: pointer;
 }
