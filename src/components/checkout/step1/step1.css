@@ -7,13 +7,13 @@
   padding: 50px 0;
   font-family: var(--font-1);
   min-height: 86vh;
+  width: 100%;
 }
 
 /*  ///////////////////////////Detalle derecha//////////////////////////////// */
 
 .order__detalle {
   width: 400px;
-
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -83,7 +83,7 @@
 
 .order__form form input {
   width: 100%;
-  margin-top: 30px;
+  margin-top: 20px;
   padding: 15px;
   outline: none;
   border: 1px solid #ccc;
@@ -118,4 +118,12 @@ select:-webkit-autofill:focus {
   border: 1px solid #222;
   -webkit-text-fill-color: #222;
   transition: background-color 5000s ease-in-out 0s;
+}
+
+/* ----------------------------error-------------------- */
+
+.login__error{
+  color: red;
+  font-size: 12px;
+  position: absolute;
 }
