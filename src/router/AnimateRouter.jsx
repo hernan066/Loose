@@ -8,6 +8,7 @@ import PageProducto from "../pages/PageProducto";
 import { DatosEnvio } from "../pages/DatosEnvio";
 import { FinalizaCompra } from "../pages/FinalizaCompra";
 import { ConfirmaDatos } from "../pages/ConfirmaDatos";
+import { PageQr } from "../pages/PageQr";
 
 export const AnimateRouter = () => {
   const location = useLocation();
@@ -19,7 +20,8 @@ export const AnimateRouter = () => {
         <Route path="/producto" element={<PageProducto />} />
         <Route path="/checkout/datos-envio" element={<DatosEnvio />} /> 
         <Route path="/checkout/confirma-datos-envio" element={<ConfirmaDatos />} />
-        <Route path="/checkout/finaliza-compra" element={<FinalizaCompra />} /> 
+        <Route path="/checkout/finaliza-compra" element={<FinalizaCompra />} />
+        <Route path="/qr" element={<PageQr />} /> 
       </Routes>
     </AnimatePresence>
   );
