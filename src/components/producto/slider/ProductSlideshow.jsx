@@ -3,7 +3,7 @@ import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import images from "../../../assets/images";
 
-export const ProductSlideshow = ({imagenes}) => {
+export const ProductSlideshow = ({imagenes = []}) => {
   //const images1 = [images.remeraNegra, images.remeraBlanca];
 
   return (

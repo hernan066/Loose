@@ -16,7 +16,10 @@ const Producto = () => {
   const slug = location.pathname.split("/")[2];
 
   const productoFiltrado = datosProductos.filter((dato) => dato.slug === slug);
+  
   const producto = productoFiltrado[0];
+
+  const imagenes = producto?.img
 
   const agregar = () => {
     setCantidad(cantidad + 1);
@@ -47,7 +50,7 @@ const Producto = () => {
     
     >
       <div className="producto__slider_container">
-        <ProductSlideshow imagenes={producto.img} />
+        <ProductSlideshow imagenes={imagenes} />
       </div>
 
       <div className="producto__detalle">
