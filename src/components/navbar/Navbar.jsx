@@ -39,7 +39,7 @@ const Navbar = () => {
           exit={{ opacity: 0 }}
         >
           <li>
-            <Link to={"/producto"}>Productos</Link>
+            <Link to={"/productos"}>Productos</Link>
           </li>
           <li>
             <a href="#">Contacto</a>

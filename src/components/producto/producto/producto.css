@@ -55,6 +55,7 @@
 /* -----------------detalle-------------------- */
 .producto__detalle h1 {
   font-size: 2.5rem;
+  text-transform: uppercase;
 }
 .producto__detalle h2 {
   font-size: 2.5rem;

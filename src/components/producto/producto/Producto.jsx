@@ -1,37 +1,48 @@
 import { useState } from "react";
-import { productos } from "../../db/productos";
+import { datosProductos } from "../../../db/datosProductos";
+import { ProductSlideshow } from "../slider/ProductSlideshow";
+import { useLocation } from "react-router";
+
 import "./producto.css";
-import { ProductSlideshow } from "./slider/ProductSlideshow";
 
 const Producto = () => {
   const [seletSize, setSeletSize] = useState(null);
   const [cantidad, setCantidad] = useState(1);
   const [error, setError] = useState(false);
+
+  const location = useLocation();
+
+  const slug = location.pathname.split("/")[2];
+
   
-  
-  const agregar = ()=>{
-    setCantidad(cantidad+1)
-  }
-  const quitar = ()=>{
-    if(cantidad > 1){
-      setCantidad(cantidad-1)
+
+  const productoFiltrado = datosProductos.filter((dato) => dato.slug === slug);
+  const producto = productoFiltrado[0];
+
+  const agregar = () => {
+    setCantidad(cantidad + 1);
+  };
+  const quitar = () => {
+    if (cantidad > 1) {
+      setCantidad(cantidad - 1);
     }
-  }
-  const comprar = ()=>{
-    if(!seletSize){
-      setError(true)
-    }else{
-      setError(false)
+  };
+  const comprar = () => {
+    if (!seletSize) {
+      setError(true);
+    } else {
+      setError(false);
     }
-  }
+  };
+
   return (
     <section className="producto__container">
       <ProductSlideshow />
 
       <div className="producto__detalle">
-        <h1>{productos.categoria}</h1>
-        <h2>one white</h2>
-        <h3>$5,000.00</h3>
+        <h1>{producto?.categoria}</h1>
+        <h2>{producto?.nombre}</h2>
+        <h3>${producto?.precio}</h3>  
         <p>
           CONFECCIÓN: Corte y diseño OVERSIZED personalizado, y de nuestra
           propia marca, esta camiseta provee el ajuste extra holgado en las
@@ -87,17 +98,18 @@ const Producto = () => {
         </div>
         <div className="producto__comprar">
           <div className="producto__cantidad">
-            <div className="producto__cantidad_squat cursor" onClick={quitar}>-</div>
+            <div className="producto__cantidad_squat cursor" onClick={quitar}>
+              -
+            </div>
             <div className="producto__cantidad_squat">{cantidad}</div>
-            <div className="producto__cantidad_squat cursor " onClick={agregar}>+</div>
+            <div className="producto__cantidad_squat cursor " onClick={agregar}>
+              +
+            </div>
           </div>
-          <button className="producto__comprar_btn" onClick={comprar}>Comprar</button>
-          {
-            error &&  <p className="error">Error: Debe seleccionar un talle</p>
-          }
-          
-          
-         
+          <button className="producto__comprar_btn" onClick={comprar}>
+            Comprar
+          </button>
+          {error && <p className="error">Error: Debe seleccionar un talle</p>}
         </div>
       </div>
     </section>
