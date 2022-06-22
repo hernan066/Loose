@@ -2,12 +2,22 @@ import "./productos.css";
 import { datosProductos } from "../../../db/datosProductos";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router";
+import { motion } from "framer-motion";
 
 export const Productos = () => {
   const location = useLocation();
 
   return (
-    <main className="productos__container">
+    <motion.main 
+    className="productos__container"
+    initial={{ opacity: 0, y: -100 }}
+              animate={{
+                opacity: 1,
+                y: 0,
+                transition: { duration: 0.5, delay: 1.2 },
+              }}
+              exit={{ opacity: 0 }}
+    >
       <h1>Productos</h1>
 
       <div className="productos__cards_container">
@@ -28,6 +38,6 @@ export const Productos = () => {
           );
         })}
       </div>
-    </main>
+    </motion.main>
   );
 };

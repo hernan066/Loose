@@ -13,6 +13,7 @@ import capsula from './img/productos/capsula.jpg';
 import mini_blanca1 from './img/productos/mini_remera_blanca1.jpg';
 import mini_blanca2 from './img/productos/mini_remera_blanca2.jpg';
 import talles from './img/productos/talles.jpg';
+import modelB from './img/productos/moldeB.png';
 
 
 import logo from './img/logos/LooseB.png';
@@ -38,6 +39,7 @@ export default {
     negra,
     logo,
     remeraNegra,
-    remeraBlanca
+    remeraBlanca,
+    modelB
    
 }

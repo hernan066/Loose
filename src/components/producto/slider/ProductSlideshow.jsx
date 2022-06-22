@@ -1,19 +1,14 @@
-import './productSlideshow.css'
+import "./productSlideshow.css";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
-import images from '../../../assets/images';
+import images from "../../../assets/images";
 
-export const ProductSlideshow = () => {
-  const images1 = [images.remeraNegra, images.remeraBlanca];
+export const ProductSlideshow = ({imagenes}) => {
+  //const images1 = [images.remeraNegra, images.remeraBlanca];
 
   return (
-    
-    <div style={{  maxWidth: '650px'}}>
-
-
     <Slide easing="ease" duration={7000} indicators>
-      {images1.map((image) => {
-        
+      {imagenes.map((image) => {
         return (
           <div className="each-slide" key={image}>
             <div
@@ -26,6 +21,5 @@ export const ProductSlideshow = () => {
         );
       })}
     </Slide>
-    </div>
   );
 };
