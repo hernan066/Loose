@@ -16,4 +16,11 @@
   body{
     overflow-x:hidden;
   }
+
+  a {
+    text-decoration: none;
+  }
+  ul{
+    list-style: none;
+  }
   
