@@ -1,22 +1,24 @@
 import "./contacto.css"
+import images from "../../assets/images"
 
 export const Contacto = () => {
     return (
-        <div className="contact__container">
-            <div className="contact__banner">
-                <div className="contact__titulo">
-                    <h1>Contacto</h1>
+        <section className="contact__container">
+            <div className="sct1__container">
+                <div className="sct1_textcontain">
+                    <h1 className="sct1__text">CONTACTO</h1>
                 </div>
-                <div className="contact__imagencontainer">
-                    <img src="" alt="" />
+                <div className="sct1__imagecontainer">
+                    <img className="sct1__image" src={images.contacto_banner} alt="imagenfacha" />
                 </div>
             </div>
-            <div className="contact__main">
-                <h2>Medios de contacto</h2>
+            <div className="sct2__container">
+                <div className="sct2_cajanegra"></div>
+                <h2>holapa</h2>
+                
+                
+
             </div>
-
-
-
-        </div>
-    )
-}
+        </section>
+    ) 
+} 

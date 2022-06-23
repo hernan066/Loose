@@ -15,6 +15,8 @@ import logo from './img/logos/LooseB.png';
 import remeraBlanca from "./img/productos/RemeraEze.png"
 import remeraNegra from "./img/productos/RemeraEze2.png"
 
+import contacto_banner from "./img/banner/contacto_banner.png"
+
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
     banner,
@@ -31,6 +33,6 @@ export default {
     negra,
     logo,
     remeraNegra,
-    remeraBlanca
-   
+    remeraBlanca,
+    contacto_banner
 }
