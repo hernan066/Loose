@@ -1,7 +1,7 @@
 import "./navbar.css";
 import images from "../../assets/images";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useDispatch, useSelector } from "react-redux";
 import { openHambugerMenu } from "../../redux/uiSlice";
 import { MobileMenu } from "../mobileMenu/MobileMenu";
@@ -17,7 +17,9 @@ const Navbar = () => {
 
   return (
     <nav className="nav">
-      {hambugerMenu ? <MobileMenu /> : null}
+      <AnimatePresence exitBeforeEnter>
+        {hambugerMenu ? <MobileMenu /> : null}
+      </AnimatePresence>
 
       <div className="nav__container">
         <div className="nav__logo">
