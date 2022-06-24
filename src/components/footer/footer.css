@@ -1,13 +1,19 @@
 .footer__container {
     width: 100%;
     height: auto;
-    background-color: var(--black-color);
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+    *display: inline-flex;
+    *justify-content: space-between;
+    *flex-wrap: wrap-reverse;
 }
 
-#derechos__reservados {
+.footer__container__links {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.footer__container__links__izquierda {
     background-color: var(--black-color);
     order: 0;
     flex: 1;
@@ -16,36 +22,46 @@
     color: bisque;
     height: 230px;
     display: flex;
-    align-items: flex-end;
-    text-align: center;
-    justify-content: center;
+    flex-direction: column;
     font: var(--font-1);
-    padding-bottom: 20px;
-
+    padding-bottom: 30px;
+    width: 33%;
+    border: 2px solid chartreuse;
 }
 
-#sobre_nosotros {
+.footer__container__links__centro {
+    background-color: var(--black-color);
+    order: 1;
+    flex: 1;
+    display: flex;
+    height: 230px;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid aqua;
+    color: var(--white-color);
+}
+
+.footer__container__links__derecha {
     background-color: var(--black-color);
     order: 1;
     flex: 1;
     height: 230px;
-
-
-}
-
-#iconos {
-    background-color: var(--black-color);
-    order: 2;
-    flex: 1;
-    height: 230px;
     display: flex;
     text-align: center;
-    align-items: baseline;
-    padding-top: 25px;
+    flex-direction: column;
+    border: 4px solid rgb(255, 0, 0);
+}
+
+.footer__container__links__derecha__full__arriba {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    border: 2px solid rgb(0, 255, 247);
+    padding-top: 30px;
     justify-content: space-evenly;
 }
 
-.footer__iconos__container {
+.footer__container__links__derecha__arriba__iconos {
     height: 50px;
     width: 50px;
     background-color: #555;
@@ -54,13 +70,49 @@
     align-items: center;
     justify-content: center;
     padding-top: 3px;
-
 }
 
-.footer__iconos__container a {
+.footer__container__links__derecha__arriba__iconos a {
     color: var(--black-color);
     font-size: 30px;
 }
+
+.footer__container__links__derecha__full__abajo {
+    color: aliceblue;
+    border: 2px solid olive;
+    margin-top: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer__container__derechos__reservados {
+    width: 100%;
+    height: 40px;
+    border: 2px solid rgb(0, 217, 255);
+    display: flex;
+    justify-content: center;
+    background-color: var(--black-color);
+
+}
+
+@media screen (min-width:) {}
 
 /* blanco : --white-color
     negro: --black-color
