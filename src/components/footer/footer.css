@@ -34,6 +34,7 @@
     color: var(--white-color);
     text-decoration: none;
     justify-content: space-around;
+    ¨*letter-spacing: 3px;
 }
 
 .footer__container__links__centro {
@@ -56,6 +57,7 @@
     font-size: 20px;
     color: var(--white-color);
     text-decoration: none;
+    *letter-spacing: 3px;
 }
 
 .footer__container__links__derecha {
@@ -99,8 +101,19 @@
 }
 
 .footer__container__links__derecha__full__abajo {
-    color: aliceblue;
-    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    padding-bottom: 50px;
+}
+.footer__container__links__derecha__full__abajo a {
+    color: var(--white-color);
+    font-family: Oswald;
+    font-style: normal;
+    text-decoration: none;
+    letter-spacing: 5px;
+    font-size: large;
+    
 }
 
 .footer__container__derechos__reservados {

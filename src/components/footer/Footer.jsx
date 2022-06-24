@@ -60,7 +60,9 @@ const Footer = () => {
             </a>
           </div>
           </div>
-          <div className="footer__container__links__derecha__full__abajo"></div>
+          <div className="footer__container__links__derecha__full__abajo">
+           <div><a target='blank' href=""></a></div>
+          </div>
         </div>
        
       </div>
