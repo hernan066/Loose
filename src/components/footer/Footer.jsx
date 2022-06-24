@@ -6,14 +6,15 @@ const Footer = () => {
 
       <div className="footer__container__links">
         <div className="footer__container__links__izquierda">
-        <p>Chauuuuuuua</p>
-          <p>Chaisjdlakjdklad</p>
-          <p>oasidjasjdlakjdlkajdklajdlkaj</p>
-          <p>Chacuuuuuuu</p>
+          <div><a target='blank' href="">Productos</a></div>
+          <div><a target='blank' href="">Tabla de talles</a></div>
+          <div><a target='blank' href="">Como usar el qr</a></div>
         </div>
         <div className="footer__container__links__centro">
-          Chauuuuuuua
-          
+          <div><a target='blank' href="">Contacto</a></div>
+          <div><a target='blank' href="">Medios de pago</a></div>
+          <div><a target='blank' href="">Sobre Loose</a></div>
+  
         </div>
         <div className="footer__container__links__derecha">
           <div className="footer__container__links__derecha__full__arriba">
@@ -59,13 +60,12 @@ const Footer = () => {
             </a>
           </div>
           </div>
-          <div className="footer__container__links__derecha__full__abajo">Hola</div>
+          <div className="footer__container__links__derecha__full__abajo"></div>
         </div>
        
       </div>
 
       <div className="footer__container__derechos__reservados">
-        {" "}
         <span>© 2022 Loose, Inc. Todos los derechos reservados.</span>
       </div>
     </footer>
