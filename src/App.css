@@ -13,3 +13,14 @@
     --font-1: "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-2: 'Oswald', sans-serif;
   }
+  body{
+    overflow-x:hidden;
+  }
+
+  a {
+    text-decoration: none;
+  }
+  ul{
+    list-style: none;
+  }
+  
