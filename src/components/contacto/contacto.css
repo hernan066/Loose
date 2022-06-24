@@ -1,57 +1,51 @@
-/* 1440 = 100%
- = */
-
-
-
 .contact__container{
     width: 100%;
     height: 187vh;
-    background-color: black;
+    background-color: var(--black-color);
 }
 .sct1__container{
     width: 100%;
     height: 87vh;
     display: flex;
-    background-color: black;
+    background-color: var(--black-color);
+    *overflow: hidden;
 }
 .sct1_textcontain{
-    width: 33vw;
+    width: 40vw;
     height: 87vh;
-    background-color: white;
+    background-color: var(--white-color);
     align-items: center;
     display: flex;
     justify-content: center;
-
-    
 }
-.sct1__text{
-    padding-top: 61px;
-    padding-bottom: 61px;
-    padding-left: 39px;
-    padding-right: 39px;
-    border: 3.16px solid black ;
-    background-color: white;
+.sct1_textcontain p{
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    border: 3.16px solid var(--black-color) ;
+    background-color: var(--white-color);
     font-family: var(--font-2);
-    font-size: 64px;
+    font-size: 5vw;
     font-weight: 600;
     letter-spacing: 3.69px;
 }
 .sct1__imagecontainer{
-    width: 67vw;
+    width: 60vw;
     height: 87vh;
     background-color: blueviolet;
 }
 .sct1__image{
-    width: 67vw;
+    width: 60vw;
     height: 87vh;
     object-fit: cover;
 }
 .sct2__container{
     width: 100%;
     height: 100vh;
-    background-color: chocolate;
-    position: relative;
-    z-index: 2;
+    background-color: var(--white-color);
+    position: absolute;
+    z-index: 1;
 }
 .sct2_cajanegra{
     width: 100%;
@@ -61,7 +55,34 @@
     *top: 0px;
     z-index: -1;
 }
-.sct2__container h2{
-    color: white;
+.sct2_imagebloq{
+    width: 44vh;
+    height: 40vw;
+    background-color: aqua;
+    display: flex;
+    position: relative;
+    top: 6%;
+    left: 6%;
+}
 
+@media screen and (max-width: 770px){
+    .sct1__container{
+        flex-direction: column;     
+    }
+    .sct1_textcontain{
+        width: 100vw;
+        height: 40vh;
+    }
+    .sct1_textcontain p{
+        *padding-top: 5%;
+        border: none;
+        font-size: 40px;
+    }
+    .sct1__imagecontainer{
+        width: auto;
+    }
+    .sct1__image{
+        width: 100vw;
+        *display: none;
+    }        
 }
