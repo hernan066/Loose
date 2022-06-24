@@ -20,7 +20,7 @@
     text-align: center;
     justify-content: center;
     font: var(--font-1);
-
+    padding-bottom: 20px;
 
 }
 
@@ -39,10 +39,10 @@
     flex: 1;
     height: 230px;
     display: flex;
-    text-align: basecenterline;
+    text-align: center;
     align-items: baseline;
-    padding-top: 20px;
-    padding-left: 20px
+    padding-top: 25px;
+    justify-content: space-evenly;
 }
 
 .footer__iconos__container {
@@ -59,7 +59,7 @@
 
 .footer__iconos__container a {
     color: var(--black-color);
-    font-size: 40px;
+    font-size: 30px;
 }
 
 /* blanco : --white-color
