@@ -4,27 +4,74 @@
     background-color: #fff;
     padding: 40px 20px;
     margin-top: 60px;
+    text-align: center;
 }
 .seccion4__container h2{
     margin-bottom: 60px;
     text-align: center;
     text-transform: uppercase;
     font-size: 5rem;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;;
+    letter-spacing: 7px;
+    font-family: var(--font-2);
+    position: relative;
 }
 .seccion4__card-container{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 
-.seccion4__card{
-    height: 500px;
+.seccion4__card-image{
     width: 500px;
-    border: 1px solid #111;
+    min-width: 300px;
+   
 }
 .seccion4__card img{
     width: 100%;
    
+}
+.seccion4__card-image{
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+.seccion4__card-image:hover{
+    transform: scale(1.15);
+
+}
+.seccion4__card h3{
+    text-align: center;
+    font-size: 2rem;
+    font-family: var(--font-2);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+   
+}
+
+.seccion4__container h2{
+    border-bottom: 1px solid var(--black-color);
+    border-top: 1px solid var(--black-color);
+  
+   
+}
+
+@media screen and (max-width: 768px){
+    .seccion4__container h2{
+        font-size: 3rem;
+    }
+    .seccion4__card-image{
+        width: 100%;
+    }
+    
+    
+}
+@media screen and (max-width: 580px){
+   
+    .seccion4__container{
+        margin-top: 0;
+    }
+    .seccion__text-p{
+        width: 100%;
+    }
 }

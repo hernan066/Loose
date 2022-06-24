@@ -2,6 +2,7 @@
   width: 100%;
   padding: 0 3rem;
   height: 14vh;
+  font-family: var(--font-2);
 }
 .nav__logo {
   height: 70px;
@@ -29,34 +30,73 @@
   transition: all 0.3s ease-in-out;
 }
 
-.nav ul {
+.nav .nav__list {
   display: flex;
   list-style-type: none;
   align-items: center;
   justify-content: center;
 }
 
-.nav a {
+ .nav__list a {
   color: rgb(246, 244, 244);
   text-decoration: none;
   padding: 7px 15px;
   transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1.2rem;
 }
 
-.nav.active {
+.nav__list.active {
   background-color: #fff;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
-.nav.active a {
+.nav__list.active a {
   color: #000;
 }
 
-.nav.active .container {
+.nav__list.active .container {
   padding: 10px 0;
 }
 
-.nav a.current,
-.nav a:hover {
+.nav__list a.current,
+.nav__list a:hover {
   color: #636364;
+} 
+
+.hamburger{
+  color: var(--white-color);
+  font-size: 30px;
+  display: none;
 }
+
+
+/* //////////////////////animate hamburger icon//////////////////////////// */
+
+
+
+
+@media screen and (max-width: 768px) {
+  .nav .nav__list {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+  .nav__container {
+   
+    padding: 0 1rem;
+   
+  }
+}
+@media screen and (min-width: 900px) {
+  
+  .nav__container {
+   
+    padding: 0 2rem;
+   
+  }
+}
+
+

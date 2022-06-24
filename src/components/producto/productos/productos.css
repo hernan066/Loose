@@ -1,0 +1,32 @@
+.productos__container {
+  width: 100%;
+  min-height: 87vh;
+}
+.productos__container h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 5rem;
+  letter-spacing: 7px;
+  font-family: var(--font-2);
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+.productos__cards_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 550px) {
+  .productos__container h1 {
+    font-size: 4rem;
+  }
+}
+@media screen and (max-width: 360px) {
+  .productos__container h1 {
+    font-size: 3.5rem;
+  }
+}

@@ -1,23 +1,58 @@
 import "./navbar.css";
-import images from '../../assets/images'
+import images from "../../assets/images";
 import { Link } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
+import { useDispatch, useSelector } from "react-redux";
+import { openHambugerMenu } from "../../redux/uiSlice";
+import { MobileMenu } from "../mobileMenu/MobileMenu";
 
 const Navbar = () => {
+  const { hambugerMenu } = useSelector((state) => state.ui);
+
+  const dispatch = useDispatch();
+
+  const handlerClick = () => {
+    dispatch(openHambugerMenu());
+  };
+
   return (
     <nav className="nav">
+      <AnimatePresence exitBeforeEnter>
+        {hambugerMenu ? <MobileMenu /> : null}
+      </AnimatePresence>
+
       <div className="nav__container">
         <div className="nav__logo">
           <Link to={"/"}>
-            <img src={images.logo} alt="logo" />
+            <motion.img
+              src={images.logo}
+              alt="logo"
+              initial={{ opacity: 0, x: -100 }}
+              animate={{
+                opacity: 1,
+                x: 0,
+                transition: { duration: 0.5, delay: 1.2 },
+              }}
+              exit={{ opacity: 0 }}
+            />
           </Link>
         </div>
 
-        <ul>
+        <motion.ul
+          className="nav__list"
+          initial={{ opacity: 0, x: 100 }}
+          animate={{
+            opacity: 1,
+            x: 0,
+            transition: { duration: 0.5, delay: 1.2 },
+          }}
+          exit={{ opacity: 0 }}
+        >
           <li>
-            <Link to={"/producto"}>Productos</Link>
+            <Link to={"/productos"}>Productos</Link>
           </li>
           <li>
-            <a href="#">Tabla De Talles</a>
+            <a href="#">Contacto</a>
           </li>
           <li>
             <a href="#">Sobre Losse</a>
@@ -25,7 +60,10 @@ const Navbar = () => {
           <li>
             <a href="#">QR</a>
           </li>
-        </ul>
+        </motion.ul>
+        <div className="hamburger" onClick={handlerClick}>
+          <i class="fa-solid fa-bars"></i>
+        </div>
       </div>
     </nav>
   );
