@@ -1,4 +1,3 @@
-import images from "../../assets/images";
 import "./cart.css";
 import { useNavigate } from "react-router";
 import { useDispatch, useSelector } from "react-redux";
@@ -22,6 +21,15 @@ export const Cart = () => {
 
   return (
     <main className="cart__container">
+      <div className="card__nav" style={{ textAlign: "left" }}>
+        <span style={{ color: "#111", fontWeight: "bold" }}>
+          Mi carrito {">"}{" "}
+        </span>
+        <span style={{ color: "#aaa" }}>Datos de envio {">"} </span>
+        <span style={{ color: "#aaa" }}>Resumen compra {">"} </span>
+        <span style={{ color: "#aaa" }}>Finaliza compra</span>
+      </div>
+
       <h1>MI Carrito</h1>
 
       {quantity === 0 ? (
@@ -33,10 +41,10 @@ export const Cart = () => {
         </div>
       ) : (
         <section className="car__products__container">
-          {products.map((producto) => {
-            return (
-              <div className="cart__products" key={producto.id}>
-                <div className="cart__product">
+          <div className="cart__products">
+            {products.map((producto) => {
+              return (
+                <div className="cart__product" key={producto.id}>
                   <div className="cart__img_container">
                     <img src={producto.imagen} alt="remera" />
                   </div>
@@ -44,7 +52,7 @@ export const Cart = () => {
                     <div className="cart__info_nombre">
                       <h3>Producto</h3>
                       <p>
-                        {producto.categoria} {producto.nombre}
+                        {/* {producto.categoria} */} {producto.nombre} - {producto.talle}
                       </p>
                     </div>
                     <div className="cart__info_precio">
@@ -52,7 +60,7 @@ export const Cart = () => {
                       <p>${producto.precio}</p>
                     </div>
                     <div className="cart__info_cantidad">
-                      <h3>Cantidad</h3>
+                      <h3>Cant.</h3>
                       <p>{producto.cantidad}</p>
                     </div>
                     <div className="cart__info_borrar">
@@ -63,21 +71,21 @@ export const Cart = () => {
                     </div>
                   </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
 
           <div className="order__detalle card">
             <h3>Resumen de compra</h3>
 
             <div className="order__producto card">
-              <h4>Subtotal</h4>
-              <h4>${total}</h4>
+              <h5>Subtotal</h5>
+              <h5>${total}</h5>
             </div>
-            <div className="order__producto card">
+            {/* <div className="order__producto card">
               <h4>Envio</h4>
               <h4>$800.00</h4>
-            </div>
+            </div> */}
             <div className="order__producto card total">
               <h4>Total</h4>
               <h4>${total}</h4>

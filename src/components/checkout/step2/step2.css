@@ -1,13 +1,24 @@
 .confirm__container {
+  min-height: 86vh;
+  width: 100%;
+  font-family: var(--font-1);
+  padding: 2rem;
+}
+.confirm__container h1{
+  font-size: 70px;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: var(--font-2);
+
+}
+
+.confirm__container__flex {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   gap: 30px;
   flex-wrap: wrap;
   padding: 50px 0;
-  font-family: var(--font-1);
-  min-height: 86vh;
-  width: 100%;
 }
 .confirm__left {
   display: flex;
@@ -16,6 +27,7 @@
   width: 500px;
   border: 1px solid var(--black-color);
   padding: 30px;
+  box-shadow: 3px 3px 5px rgb(195, 195, 195);
 }
 .confirm__right {
   width: 400px;
@@ -39,14 +51,16 @@
 
 .confirm__data {
   width: 100%;
+  position: relative;
+  padding-bottom: 15px;
 }
 .confirm__data h4 {
   border: 1px solid #ddd;
   padding: 10px;
   margin-bottom: 20px;
 }
-.confirm__data h4  span {
-    font-weight: normal;
+.confirm__data h4 span {
+  font-weight: normal;
 }
 
 .confirm__right_btn {
@@ -65,4 +79,17 @@
 
 .confirm__right_btn:hover {
   transform: scale(1.05);
+  box-shadow: 3px 3px 5px rgb(124, 124, 124);
+}
+
+.confirm__edit {
+  margin-top: 10px;
+  color: var(--primary-color);
+  text-decoration: underline;
+  cursor: pointer;
+  position: absolute;
+  bottom: -10px;
+  right: 5px;
+  background-color: transparent;
+  border: none;
 }

@@ -167,4 +167,7 @@
   .producto__talle p {
     margin-right: 0vw;
   }
+  .producto__comprar_btn {
+    font-size: 15px;
+  }
 }

@@ -2,7 +2,7 @@ import images from "../assets/images";
 
 export const datosProductos = [
     {
-        nombre: 'one white',
+        nombre: 'One white',
         slug: 'one-white',
         categoria: 'remera oversize',
         precio: 5000,
@@ -13,7 +13,7 @@ export const datosProductos = [
 
     },
     {
-        nombre: 'one black',
+        nombre: 'One black',
         slug: 'one-black',
         categoria: 'remera oversize',
         precio: 5000,
