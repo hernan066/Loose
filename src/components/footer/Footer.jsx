@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="footer__container">
 
-      <div className="footer__container__links">
+      <nav className="footer__container__links">
         <div className="footer__container__links__izquierda">
           <div><a target='blank' href="">Productos</a></div>
           <div><a target='blank' href="">Tabla de talles</a></div>
@@ -65,7 +65,7 @@ const Footer = () => {
           </div>
         </div>
        
-      </div>
+      </nav>
 
       <div className="footer__container__derechos__reservados">
         <span>© 2022 Loose, Inc. Todos los derechos reservados.</span>
