@@ -1,25 +1,30 @@
 import { useState } from "react";
 import { datosProductos } from "../../../db/datosProductos";
 import { ProductSlideshow } from "../slider/ProductSlideshow";
-import { useLocation } from "react-router";
+import { useLocation, useNavigate } from "react-router";
 import { motion } from "framer-motion";
 
 import "./producto.css";
+import { useDispatch } from "react-redux";
+import { addProduct } from "../../../redux/cartSlider";
 
 const Producto = () => {
   const [seletSize, setSeletSize] = useState(null);
   const [cantidad, setCantidad] = useState(1);
   const [error, setError] = useState(false);
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const location = useLocation();
 
   const slug = location.pathname.split("/")[2];
 
+  /* aca va el fetch de producto a la API */
   const productoFiltrado = datosProductos.filter((dato) => dato.slug === slug);
-  
+
   const producto = productoFiltrado[0];
 
-  const imagenes = producto?.img
+  const imagenes = producto?.img;
 
   const agregar = () => {
     setCantidad(cantidad + 1);
@@ -34,20 +39,32 @@ const Producto = () => {
       setError(true);
     } else {
       setError(false);
+      dispatch(
+        addProduct({
+          id: producto.slug,
+          nombre: producto.nombre,
+          categoria: producto.categoria,
+          precio: producto.precio,
+          imagen: producto.img[0],
+          talle: seletSize,
+          cantidad: cantidad,
+        })
+      );
+
+      navigate("/carrito");
     }
   };
 
   return (
-    <motion.section 
-    className="producto__container"
-    initial={{ opacity: 0, y: -100 }}
-              animate={{
-                opacity: 1,
-                y: 0,
-                transition: { duration: 0.5, delay: 1.2 },
-              }}
-              exit={{ opacity: 0 }}
-    
+    <motion.section
+      className="producto__container"
+      initial={{ opacity: 0, y: -100 }}
+      animate={{
+        opacity: 1,
+        y: 0,
+        transition: { duration: 0.5, delay: 1.2 },
+      }}
+      exit={{ opacity: 0 }}
     >
       <div className="producto__slider_container">
         <ProductSlideshow imagenes={imagenes} />
@@ -108,7 +125,7 @@ const Producto = () => {
             </div>
           </div>
           <button className="producto__comprar_btn" onClick={comprar}>
-            Comprar
+            Agregar al carrito
           </button>
           {error && <p className="error">Error: Debe seleccionar un talle</p>}
         </div>

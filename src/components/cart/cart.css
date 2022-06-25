@@ -3,6 +3,9 @@
   min-height: 87vh;
   background-color: var(--white-color);
   padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   
   
 }
@@ -62,6 +65,9 @@
 .cart__info_product h3{
     margin-bottom: 20px;
 }
+.cart__info_nombre p{
+    text-transform: capitalize;
+}
 .cart__info_borrar p{
     color: var(--primary-color);
     cursor: pointer;
@@ -98,4 +104,21 @@
     text-transform: uppercase;
     letter-spacing: 3px;
     margin-top: 20px;
+}
+
+.cart__vacio{
+  border: 2px solid var(--black-color);
+  width: 75%;
+  padding: 40px;
+  text-align: center;
+}
+.cart__vacio h2{
+  font-family: var(--font-2);
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+.cart__vacio a{
+  font-family: var(--font-1);
+  color: var(--primary-color);
+  font-size: 20px;
 }
