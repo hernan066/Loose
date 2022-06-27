@@ -1,35 +1,149 @@
-.footer_container{
+.footer__container {
     width: 100%;
-    height: 230px;
-    background-color: var(--black-color);
+    height: auto;
     display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-}
-#locales{
-    background-color: rgb(0, 0, 0);
-    order: 0;
-    width: 33%;
-   
-    font-size: medium;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: bold;
-    color: bisque;
-}
-#sobre_nosotros{
-    background-color: rgb(17, 48, 37);
-    order: 1;
-    width: 33%;
-    
-}
-#iconos{
-    background-color: rgb(37, 16, 16);
-    order: 2;
-    width: 33%;
+    flex-direction: column;
+    flex-wrap: wrap-reverse;
 }
 
+.footer__container__links {
+    width: 100%;
+    order: 0;
+    flex: 2;
+    display: flex;
+    align-content: space-between;
+    padding-top: 30px;
+}
+
+.footer__container__links__izquierda {
+    background-color: var(--black-color);
+    order: 1;
+    flex: 1;
+    height: 230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 33%;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.footer__container__links__izquierda a {
+    font-family: Oswald;
+    font-size: 20px;
+    color: var(--white-color);
+    text-decoration: none;
+    justify-content: space-around;
+    ¨*letter-spacing: 3px;
+}
+
+.footer__container__links__centro {
+    background-color: var(--black-color);
+    order: 2;
+    flex: 1;
+    display: flex;
+    height: 230px;
+    width: 33%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: var(--white-color);
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.footer__container__links__centro a {
+    font-family: Oswald;
+    font-size: 20px;
+    color: var(--white-color);
+    text-decoration: none;
+    *letter-spacing: 3px;
+}
+
+.footer__container__links__derecha {
+    background-color: var(--black-color);
+    order: 3;
+    flex: 1;
+    height: 230px;
+    width: 33%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    padding-right: 40px;
+    padding-left: 40px;
+}
+
+.footer__container__links__derecha__full__arriba {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding-top: 45px;
+    justify-content: space-evenly;
+}
+
+.footer__container__links__derecha__arriba__iconos {
+    height: 50px;
+    width: 50px;
+    background-color: #555;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.footer__container__links__derecha__arriba__iconos a {
+    color: var(--black-color);
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-decoration: none;
+}
+
+.footer__container__links__derecha__full__abajo {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    padding-bottom: 50px;
+}
+.footer__container__links__derecha__full__abajo a {
+    color: var(--white-color);
+    font-family: Oswald;
+    font-style: normal;
+    text-decoration: none;
+    letter-spacing: 5px;
+    font-size: large;
+    
+}
+
+.footer__container__derechos__reservados {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--black-color);
+}
+
+.footer__container__derechos__reservados span {
+    color: var(--white-color);
+    font-family: Oswald;
+    font-style: regular;
+    font-weight: normal;
+    font-size: 14px;
+    letter-spacing: 2px;
+
+}
+
+@media screen (min-width:) {}
+
+/* blanco : --white-color
+    negro: --black-color
+    naranja: --primary-color */
+/* FUENTES: --font-1 cosas que no sean titulos
+    TITULOS: --font-2 */
 
 
 
 /* css de meli */
-

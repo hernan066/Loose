@@ -1,27 +1,25 @@
 import Footer from "../components/footer/Footer"
 import Navbar from "../components/navbar/Navbar"
-
+import { Productos } from "../components/producto/productos/Productos"
 import { AnimatePresence } from "framer-motion"
 import { Transition } from "../components/transition/Transition"
-import Producto from "../components/producto/producto/Producto"
 
 
-const PageProducto = () => {
+
+export const PageProductos = () => {
   return (
     <>
-    <AnimatePresence exitBeforeEnter>
+        <AnimatePresence exitBeforeEnter>
       <Transition />
 
       </AnimatePresence>
-      
-      <Navbar />
-      <Producto />
-      <Footer />
-
-
-
+        
+        
+        <Navbar />
+       <Productos />
+       
+        <Footer />
+    
     </>
   )
 }
-
-export default PageProducto

@@ -1,13 +1,22 @@
 .confirm__container {
+  min-height: 86vh;
+  width: 100%;
+  font-family: var(--font-1);
+  padding: 2rem;
+}
+.confirm__container h1 {
+  font-size: 4.375rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: var(--font-2);
+}
+
+.confirm__container__flex {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   gap: 30px;
-  flex-wrap: wrap;
-  padding: 50px 0;
-  font-family: var(--font-1);
-  min-height: 86vh;
-  width: 100%;
+  padding: 3.125rem 0;
 }
 .confirm__left {
   display: flex;
@@ -15,7 +24,8 @@
   align-items: center;
   width: 500px;
   border: 1px solid var(--black-color);
-  padding: 30px;
+  padding: 1.875rem;
+  box-shadow: 3px 3px 5px rgb(195, 195, 195);
 }
 .confirm__right {
   width: 400px;
@@ -25,13 +35,13 @@
   background-color: #f5f5f5;
 }
 .confirm__left h2 {
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
   text-align: center;
   font-family: var(--font-2);
 }
 .confirm__right h3 {
-  margin-bottom: 10px;
-  letter-spacing: 3px;
+  margin-bottom: 0.625rem;
+  letter-spacing: 0.1875rem;
   font-family: var(--font-2);
 }
 
@@ -39,22 +49,24 @@
 
 .confirm__data {
   width: 100%;
+  position: relative;
+  padding-bottom: 0.9375rem;
 }
 .confirm__data h4 {
   border: 1px solid #ddd;
-  padding: 10px;
-  margin-bottom: 20px;
+  padding: 0.625rem;
+  margin-bottom: 1.25rem;
 }
-.confirm__data h4  span {
-    font-weight: normal;
+.confirm__data h4 span {
+  font-weight: normal;
 }
 
 .confirm__right_btn {
   width: 100%;
-  margin-top: 10px;
-  padding: 15px;
-  letter-spacing: 4px;
-  font-size: 15px;
+  margin-top: 0.625rem;
+  padding: 0.9375rem;
+  letter-spacing: 0.25rem;
+  font-size: 0.9375rem;
   text-transform: uppercase;
   background-color: var(--black-color);
   color: var(--white-color);
@@ -65,4 +77,40 @@
 
 .confirm__right_btn:hover {
   transform: scale(1.05);
+  box-shadow: 3px 3px 5px rgb(124, 124, 124);
+}
+
+.confirm__edit {
+  margin-top: 0.625rem;
+  color: var(--primary-color);
+  text-decoration: underline;
+  cursor: pointer;
+  position: absolute;
+  bottom: -0.625rem;
+  right: 0.3125rem;
+  background-color: transparent;
+  border: none;
+}
+
+@media screen and (max-width: 900px) {
+  .confirm__container__flex {
+    flex-wrap: wrap;
+  }
+  .order__detalle {
+    max-width: 100%;
+  }
+  .confirm__left {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .confirm__container h1 {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 360px) {
+ 
+  .confirm__container {
+    padding: 2rem 2px;
+  }
 }

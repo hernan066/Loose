@@ -18,7 +18,7 @@
   left: 0;
   right: 0;
   transition: all 0.3s ease-in-out;
-  z-index: 10;
+  z-index: 11;
   box-shadow: 2px 2px 5px rgb(20, 20, 20);
 }
 
@@ -30,14 +30,14 @@
   transition: all 0.3s ease-in-out;
 }
 
-.nav ul {
+.nav .nav__list {
   display: flex;
   list-style-type: none;
   align-items: center;
   justify-content: center;
 }
 
-.nav a {
+ .nav__list a {
   color: rgb(246, 244, 244);
   text-decoration: none;
   padding: 7px 15px;
@@ -47,90 +47,41 @@
   font-size: 1.2rem;
 }
 
-.nav.active {
+.nav__list.active {
   background-color: #fff;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
-.nav.active a {
+.nav__list.active a {
   color: #000;
 }
 
-.nav.active .container {
+.nav__list.active .container {
   padding: 10px 0;
 }
 
-.nav a.current,
-.nav a:hover {
+.nav__list a.current,
+.nav__list a:hover {
   color: #636364;
-}
+} 
 
-/* //////////////////////animate hamburger icon//////////////////////////// */
-
-#hamburger-1{
+.hamburger{
+  color: var(--white-color);
+  font-size: 30px;
   display: none;
 }
 
-.hamburger .line {
-  width: 30px;
-  height: 3px;
-  background-color: var(--white-color);
-  display: block;
-  margin: 8px auto;
-  -webkit-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
 
-.hamburger:hover {
-  cursor: pointer;
-}
+/* //////////////////////animate hamburger icon//////////////////////////// */
 
-.hamburger.is-active .line:nth-child(2) {
-  opacity: 0;
-}
 
-.hamburger.is-active .line:nth-child(1) {
-  transform: translateY(11px) rotate(45deg);
-}
 
-.hamburger.is-active .line:nth-child(3) {
-  transform: translateY(-11px) rotate(-45deg);
-}
-@media screen and (max-width: 1020px) {
-  .hamburger .line {
-    width: 25px;
-    height: 3px;
-    margin: 6px auto;
-  }
-  .hamburger.is-active .line:nth-child(1) {
-    transform: translateY(9px) rotate(45deg);
-  }
-
-  .hamburger.is-active .line:nth-child(3) {
-    transform: translateY(-9px) rotate(-45deg);
-  }
-}
-@media screen and (max-width: 550px) {
-  .hamburger .line {
-    width: 20px;
-    height: 2px;
-    margin: 5px auto;
-  }
-  .hamburger.is-active .line:nth-child(1) {
-    transform: translateY(7px) rotate(45deg);
-  }
-
-  .hamburger.is-active .line:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg);
-  }
-}
 
 @media screen and (max-width: 768px) {
-  .nav ul {
+  .nav .nav__list {
     display: none;
   }
-  #hamburger-1 {
+  .hamburger {
     display: block;
   }
   .nav__container {

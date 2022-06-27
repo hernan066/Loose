@@ -1,16 +1,26 @@
 import "./navbar.css";
 import images from "../../assets/images";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
-import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useDispatch, useSelector } from "react-redux";
+import { openHambugerMenu } from "../../redux/uiSlice";
+import { MobileMenu } from "../mobileMenu/MobileMenu";
 
 const Navbar = () => {
-  
-  const [hamburgerIcon, setHamburgerIcon] = useState(false);
-  
-  
+  const { hambugerMenu } = useSelector((state) => state.ui);
+
+  const dispatch = useDispatch();
+
+  const handlerClick = () => {
+    dispatch(openHambugerMenu());
+  };
+
   return (
     <nav className="nav">
+      <AnimatePresence exitBeforeEnter>
+        {hambugerMenu ? <MobileMenu /> : null}
+      </AnimatePresence>
+
       <div className="nav__container">
         <div className="nav__logo">
           <Link to={"/"}>
@@ -29,7 +39,7 @@ const Navbar = () => {
         </div>
 
         <motion.ul
-        className="nav__list"
+          className="nav__list"
           initial={{ opacity: 0, x: 100 }}
           animate={{
             opacity: 1,
@@ -39,7 +49,7 @@ const Navbar = () => {
           exit={{ opacity: 0 }}
         >
           <li>
-            <Link to={"/producto"}>Productos</Link>
+            <Link to={"/productos"}>Productos</Link>
           </li>
           <li>
             <a href="#">Contacto</a>
@@ -51,15 +61,9 @@ const Navbar = () => {
             <a href="#">QR</a>
           </li>
         </motion.ul>
-        <div
-              className={`hamburger ${hamburgerIcon ? "is-active" : ""}`}
-              id="hamburger-1"
-              onClick={() => setHamburgerIcon(!hamburgerIcon)}
-            >
-              <span className="line"></span>
-              <span className="line"></span>
-              <span className="line"></span>
-            </div>
+        <div className="hamburger" onClick={handlerClick}>
+          <i class="fa-solid fa-bars"></i>
+        </div>
       </div>
     </nav>
   );

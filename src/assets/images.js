@@ -10,6 +10,10 @@ import blanca from './img/productos/blanca.jpeg';
 import negra from './img/productos/negra.jpeg';
 import qr from './img/productos/qr.jpg';
 import capsula from './img/productos/capsula.jpg';
+import mini_blanca1 from './img/productos/mini_remera_blanca1.jpg';
+import mini_blanca2 from './img/productos/mini_remera_blanca2.jpg';
+import talles from './img/productos/talles.jpg';
+import modelB from './img/productos/moldeB.png';
 
 import logo from './img/logos/LooseB.png';
 import remeraBlanca from "./img/productos/RemeraEze.png"
@@ -28,6 +32,9 @@ export default {
     remera2,
     remera3,
     remera4,
+    mini_blanca1,
+    mini_blanca2,
+    talles,
     qr,
     capsula,
     blanca,
@@ -36,5 +43,6 @@ export default {
     remeraNegra,
     remeraBlanca,
     contacto_banner,
-    contacto_banner2
+    contacto_banner2,
+    modelB
 }
