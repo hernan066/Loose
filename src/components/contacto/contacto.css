@@ -1,8 +1,16 @@
+
+/* Contenedor principal */
+
 .contact__container{
     width: 100%;
-    height: 187vh;
+    height: 200vh;
     background-color: var(--black-color);
 }
+
+/* Sección del banner y texto "Contacto" */
+
+/* Texto "Contacto" */
+
 .sct1__container{
     width: 100%;
     height: 87vh;
@@ -18,7 +26,7 @@
     display: flex;
     justify-content: center;
 }
-.sct1_textcontain p{
+.sct1_textcontain h1{
     padding-top: 5vh;
     padding-bottom: 5vh;
     padding-left: 3vw;
@@ -30,40 +38,201 @@
     font-weight: 600;
     letter-spacing: 3.69px;
 }
+
+/* Imagen / Banner */
+
 .sct1__imagecontainer{
     width: 60vw;
     height: 87vh;
     background-color: blueviolet;
+    *z-index: 1;
 }
 .sct1__image{
     width: 60vw;
     height: 87vh;
     object-fit: cover;
+    *z-index: -1;
+}
+
+/* Sección de información */
+
+.sct2_cajanegra{
+    width: 100%;
+    height: 24vh;
+    background-color: var(--black-color);
 }
 .sct2__container{
     width: 100%;
-    height: 100vh;
+    height: 89vh;
     background-color: var(--white-color);
-    position: absolute;
-    z-index: 1;
-}
-.sct2_cajanegra{
-    width: 100%;
-    height: 150px;
-    background-color: var(--black-color);
-    position: absolute;
-    *top: 0px;
-    z-index: -1;
-}
-.sct2_imagebloq{
-    width: 44vh;
-    height: 40vw;
-    background-color: aqua;
     display: flex;
     position: relative;
-    top: 6%;
-    left: 6%;
 }
+
+/* Sección de Imagen */
+
+.sct2_imagebloq{
+    width: 30vw;
+    height: 85vh;
+    *background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    top: -15%;
+    left: 10%;
+}
+.sct2_esquina{
+    width: 25vw;
+    height: 25vh;
+    *background-color: aqua;
+    *justify-content: left;
+    position: relative;
+    top: 87%;
+}
+.sct2_triangle{
+    border-right: 13vh solid transparent;
+    border-top: 13vh solid transparent;
+    border-bottom: 13vh solid var(--black-color);
+    border-left: 13vh solid var(--black-color);
+}
+.sct2_orangesquare{
+    width: 25vw;
+    height: 100vh;
+    *background-color: blue;
+    border: 0.3vw solid var(--primary-color);
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    z-index: 1;
+}
+.sct2_text{
+    width: 25vw;
+    height: 23vh;
+    *background-color: aqua;
+    flex-direction: column;
+    display: flex;
+    position: relative;
+    justify-content: center;
+
+}
+.sct2_text .txt1{
+    width: 100%;
+    height: 20vh;
+    *background-color: blue;
+    display: flex;
+    align-items: center;
+
+}
+.sct2_text .txt1 h2{
+    color: var(--white-color);
+    font-family: var(--font-2);
+    font-size: 5vh;
+    font-weight: 600;
+    letter-spacing: 3.69px;
+    position: relative;
+    left: 5%;
+}
+.sct2_text .txt2{
+    width: 100%;
+    height: 8vh;
+    *background-color: brown;
+    display: flex;
+    align-items: center;
+
+}
+.sct2_text .txt2 h2{
+    color: var(--black-color);
+    font-family: var(--font-2);
+    font-size: 5vh;
+    font-weight: 600;
+    letter-spacing: 3.69px;
+    position: relative;
+    left: -10%;
+}
+.sct2_imagecontainer{
+    width: 25vw;
+    height: 70vh;
+    *background-color: brown;
+    position: relative;
+    left: 10%;
+}
+.sct2_imagecontainer img{
+    width: 25vw;
+    height: 70vh;
+    object-fit: cover;
+}
+
+/* Sección de texto */
+
+.sct2_textbloq{
+    width: 35vw;
+    height: 70vh;
+    *background-color: darkorange;
+    position: relative;
+    top: 10%;
+    left: 15%;
+}
+.sct2_textbloq .sct2_texttitle{
+    *width: 200px;
+    height: 60px;
+    background-color: var(--white-color);
+    color: var(--primary-color);
+    font-family: var(--font-2);
+    font-size: 3vh;
+    *letter-spacing: 1.8px;
+    font-weight: 500;
+    padding-bottom: 0.5%;
+}
+.sct2_textbloq .sct2_parrafos{
+    height: 20vh;
+    background-color: var(--white-color);
+}
+.sct2_parrafos{
+    color: var(--primary-color);
+    font-family: var(--font-2);
+    font-size: 2.2vh;
+    letter-spacing: 1px;
+}
+.sct2_textbloq .sct2_texttitle2{
+    *width: 200px;
+    height: 50px;
+    background-color: var(--white-color);
+    color: var(--black-color);
+    font-family: var(--font-2);
+    font-size: 3vh;
+    *letter-spacing: 1.8px;
+    font-weight: 500;
+    padding-bottom: 0.5%;
+}
+.sct2_stockist{
+    width: 40vw;
+    *height: 10vh;
+    *background-color: aqua;
+    display: flex;
+    flex-wrap: wrap;
+}
+.sct2_stockist div{
+    width: 20vw;
+    height: 20vh;
+    *background-color: blue;
+    display: flex;
+    flex-direction: column;
+}
+.sct2_stockist h3{
+    height: 5vh;
+    background-color: var(--white-color);
+    color: var(--black-color);
+    font-family: var(--font-2);
+    font-size: 1.3vw;
+    font-weight: 400;
+}
+.sct2_stockist p{
+    background-color: var(--white-color);
+    color: var(--black-color);
+    font-family: var(--font-2);
+}
+/* Configuración circunstancial */
 
 @media screen and (max-width: 770px){
     .sct1__container{
@@ -71,18 +240,87 @@
     }
     .sct1_textcontain{
         width: 100vw;
-        height: 40vh;
+        height: 20vh;
     }
-    .sct1_textcontain p{
+    .sct1_textcontain h1{
         *padding-top: 5%;
         border: none;
         font-size: 40px;
     }
     .sct1__imagecontainer{
-        width: auto;
+        width: 100vw;
+        height: 67vh;
+        *display: flex;
     }
     .sct1__image{
         width: 100vw;
+        height: 67vh;
+        *object-fit: cover;
         *display: none;
     }        
+}
+@media screen and (max-width: 1000px){
+    
+    .contact__container{
+        height: 287vh;
+    }
+   
+    /* Bloque inferior */
+
+    .sct2__container{
+        flex-direction: column;
+        height: 176vh;
+    }
+
+    /* Sección izquierda */
+
+    .sct2_imagebloq{
+        width: 90vw;
+        top: -7%;
+        display: none;
+    }
+    .sct2_orangesquare{
+        width: 80vw;
+    }
+    .sct2_text{
+        width: 80vw;
+    }
+    .sct2_text .txt1{
+        height: 10vh;
+    }
+    .sct2_text .txt1 h2{
+        font-size: 5vh;
+    }
+    .sct2_text .txt2 h2{
+        font-size: 5vh;
+    }
+    .sct2_imagecontainer{
+        width: 75vw;
+    }
+    .sct2_imagecontainer img{
+        width: 100%;
+    }
+
+    /* Sección derecha */
+
+    .sct2_textbloq{
+        width: 75vw;
+        top: 5%
+    }
+    .sct2_textbloq .sct2_texttitle{
+        font-size: 4vh;
+    }
+    .sct2_textbloq .sct2_texttitle2{
+        font-size: 4vh;
+    }
+    .sct2_stockist{
+        width: 75vw;
+    }
+    .sct2_stockist div{
+        width: 37.5vw;
+    }
+    .sct2_stockist h3{
+        font-size: 3vh;
+    }
+
 }
