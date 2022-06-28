@@ -14,6 +14,7 @@ import capsula from './img/productos/capsula.jpg';
 import logo from './img/logos/LooseB.png';
 import remeraBlanca from "./img/productos/RemeraEze.png"
 import remeraNegra from "./img/productos/RemeraEze2.png"
+import qr_small from "./img/qr/qr_small.png"
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
@@ -31,6 +32,7 @@ export default {
     negra,
     logo,
     remeraNegra,
-    remeraBlanca
+    remeraBlanca,
+    qr_small
    
 }
