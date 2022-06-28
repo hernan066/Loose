@@ -1,9 +1,19 @@
 import { Link } from "react-router-dom";
 import "./step3.css";
+import { motion } from "framer-motion";
 
 export const Step3 = () => {
   return (
-    <main className="finish__container">
+    <motion.main
+      className="finish__container"
+      initial={{ opacity: 0, y: -100 }}
+      animate={{
+        opacity: 1,
+        y: 0,
+        transition: { duration: 0.5, delay: 1.2 },
+      }}
+      exit={{ opacity: 0 }}
+    >
       <div className="card__nav" style={{ textAlign: "left" }}>
         <span style={{ color: "#111", fontWeight: "bold" }}>
           Mi carrito {">"}{" "}
@@ -27,6 +37,6 @@ export const Step3 = () => {
         </p>
         <Link to="/">Volver a Home </Link>
       </div>
-    </main>
+    </motion.main>
   );
 };

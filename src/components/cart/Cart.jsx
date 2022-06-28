@@ -3,6 +3,7 @@ import { useNavigate } from "react-router";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteProduct } from "../../redux/cartSlider";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export const Cart = () => {
   const navigate = useNavigate();
@@ -20,7 +21,16 @@ export const Cart = () => {
   };
 
   return (
-    <main className="cart__container">
+    <motion.main
+      className="cart__container"
+      initial={{ opacity: 0, y: -100 }}
+      animate={{
+        opacity: 1,
+        y: 0,
+        transition: { duration: 0.5, delay: 1.2 },
+      }}
+      exit={{ opacity: 0 }}
+    >
       <div className="card__nav" style={{ textAlign: "left" }}>
         <span style={{ color: "#111", fontWeight: "bold" }}>
           Mi carrito {">"}{" "}
@@ -52,7 +62,8 @@ export const Cart = () => {
                     <div className="cart__info_nombre">
                       <h3>Producto</h3>
                       <p>
-                        {/* {producto.categoria} */} {producto.nombre} - {producto.talle}
+                        {/* {producto.categoria} */} {producto.nombre} -{" "}
+                        {producto.talle}
                       </p>
                     </div>
                     <div className="cart__info_precio">
@@ -100,6 +111,6 @@ export const Cart = () => {
           </div>
         </section>
       )}
-    </main>
+    </motion.main>
   );
 };

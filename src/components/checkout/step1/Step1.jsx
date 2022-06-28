@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux/es/exports";
 import * as Yup from "yup";
 import { addAddress } from "../../../redux/cartSlider";
+import { motion } from "framer-motion";
 
 const SignupSchema = Yup.object().shape({
   nombre: Yup.string().required("Requerido"),
@@ -22,7 +23,16 @@ export const Step1 = () => {
   const { products, total, address } = useSelector((state) => state.cart);
 
   return (
-    <main className="order__container">
+    <motion.main 
+    className="order__container"
+    initial={{ opacity: 0, y: -100 }}
+              animate={{
+                opacity: 1,
+                y: 0,
+                transition: { duration: 0.5, delay: 1.2 },
+              }}
+              exit={{ opacity: 0 }}
+    >
       <div className="card__nav" style={{ textAlign: "left" }}>
         <span style={{ color: "#111", fontWeight: "bold" }}>
           Mi carrito {">"}{" "}
@@ -164,6 +174,6 @@ export const Step1 = () => {
           </div>
         </div>
       </div>
-    </main>
+    </motion.main>
   );
 };

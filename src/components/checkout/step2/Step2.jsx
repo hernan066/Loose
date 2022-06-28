@@ -1,8 +1,9 @@
 import "./step2.css";
-import image from "../../../assets/images";
+
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import emailjs from "emailjs-com";
+import { motion } from "framer-motion";
 
 export const Step2 = () => {
   const navigate = useNavigate();
@@ -39,7 +40,16 @@ export const Step2 = () => {
   };
 
   return (
-    <main className="confirm__container">
+    <motion.main
+      className="confirm__container"
+      initial={{ opacity: 0, y: -100 }}
+      animate={{
+        opacity: 1,
+        y: 0,
+        transition: { duration: 0.5, delay: 1.2 },
+      }}
+      exit={{ opacity: 0 }}
+    >
       <div className="card__nav" style={{ textAlign: "left" }}>
         <span style={{ color: "#111", fontWeight: "bold" }}>
           Mi carrito {">"}{" "}
@@ -125,6 +135,6 @@ export const Step2 = () => {
           </button>
         </div>
       </div>
-    </main>
+    </motion.main>
   );
 };
