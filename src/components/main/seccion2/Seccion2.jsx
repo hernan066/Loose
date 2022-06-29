@@ -17,7 +17,7 @@ const Seccion2 = () => {
       const resp = await axios.get(
         `https://graph.instagram.com/me/media?fields=thumbnail_url,media_url,caption,permalink&limit=10&access_token=${token}`
       );
-      //console.log(resp.data.data);
+      console.log(resp.data.data);
       setImgInstagram(resp.data.data);
     } catch (error) {
       console.log(error);
@@ -60,7 +60,7 @@ const Seccion2 = () => {
               htmlFor="item-1"
               id="selector-1"
             >
-              <img src={imgInstagram[0].media_url} alt="remera1" />
+              <img src={imgInstagram[0]?.media_url} alt="remera1" />
               <img src={images.logo} alt="logo" id="image-logo" />
             </label>
             <label
@@ -68,7 +68,7 @@ const Seccion2 = () => {
               htmlFor="item-2"
               id="selector-2"
             >
-              <img src={imgInstagram[1].media_url} alt="remera2" />
+              <img src={imgInstagram[1]?.media_url} alt="remera2" />
               <img src={images.logo} alt="logo" id="image-logo" />
             </label>
 
@@ -77,7 +77,7 @@ const Seccion2 = () => {
               htmlFor="item-3"
               id="selector-3"
             >
-              <img src={imgInstagram[2].media_url} alt="remera3" />
+              <img src={imgInstagram[2]?.media_url} alt="remera3" />
               <img src={images.logo} alt="logo" id="image-logo" />
             </label>
           </div>
