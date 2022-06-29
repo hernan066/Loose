@@ -25,7 +25,7 @@ const Seccion4 = () => {
       >
         <motion.div className="seccion4__card" variants={scrollAnimateUp}>
           <div className="seccion4__card-image">
-            <img src={images.remeraBlanca} alt="remera blanca" />
+            <img src='https://ik.imagekit.io/mrprwema7/loose/productos/one_white_N_PnRIkxf.png?ik-sdk-version=javascript-1.4.3&updatedAt=1656450120986' alt="remera blanca" />
           </div>
           <h3>One White</h3>
         </motion.div>
