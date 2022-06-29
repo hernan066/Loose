@@ -1,10 +1,10 @@
 import "./step2.css";
-
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import emailjs from "emailjs-com";
 import { motion } from "framer-motion";
 import { clearCart } from "../../../redux/cartSlider";
+
 
 export const Step2 = () => {
   const navigate = useNavigate();

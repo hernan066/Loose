@@ -3,10 +3,10 @@ import { datosProductos } from "../../../db/datosProductos";
 import { ProductSlideshow } from "../slider/ProductSlideshow";
 import { useLocation, useNavigate } from "react-router";
 import { motion } from "framer-motion";
-
-import "./producto.css";
 import { useDispatch } from "react-redux";
 import { addProduct } from "../../../redux/cartSlider";
+
+import "./producto.css";
 
 const Producto = () => {
   const [seletSize, setSeletSize] = useState(null);
