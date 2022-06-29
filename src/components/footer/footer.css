@@ -216,7 +216,7 @@
 
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:619px) {
     .footer__container__links__derecha__arriba__iconos {
         margin: 3px;
     }
@@ -229,6 +229,35 @@
 
     .footer__container__derechos__reservados span {
         font-size: 10px;
+        letter-spacing: 1px;
+    }
+}
+
+@media screen and (max-width:337px) {
+    .footer__container__links__izquierda a {
+        font-size: 15px;
+    }
+
+    .footer__container__links__centro a {
+        font-size: 15px;
+    }
+
+    .footer__container__links__derecha__arriba__iconos {
+        height: 30px;
+        width: 30px;
+        margin: 20px;
+    }
+
+    .footer__container__links__derecha__arriba__iconos a {
+        font-size: 17px;
+    }
+
+    .footer__container__links__derecha__arriba__iconos {
+        margin: 1px;
+    }
+
+    .footer__container__derechos__reservados span {
+        font-size: 9px;
         letter-spacing: 1px;
     }
 }
