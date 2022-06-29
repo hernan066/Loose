@@ -15,7 +15,7 @@ export const Cart = () => {
       deleteProduct({
         id_pro,
         cantidad,
-        subTotal
+        subTotal,
       })
     );
   };
@@ -78,7 +78,11 @@ export const Cart = () => {
                       <h3>Borrar</h3>
                       <p
                         onClick={() =>
-                          handlerDelete(producto.id_pro, producto.cantidad, producto.subTotal)
+                          handlerDelete(
+                            producto.id_pro,
+                            producto.cantidad,
+                            producto.subTotal
+                          )
                         }
                       >
                         <i class="fa-solid fa-x"></i>
