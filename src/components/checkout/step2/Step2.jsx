@@ -1,12 +1,14 @@
 import "./step2.css";
-
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import emailjs from "emailjs-com";
 import { motion } from "framer-motion";
+import { clearCart } from "../../../redux/cartSlider";
+
 
 export const Step2 = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const { products, total, address } = useSelector((state) => state.cart);
 
   var templateParams = {
@@ -36,6 +38,7 @@ export const Step2 = () => {
           console.log("FAILED...", error);
         }
       ); */
+    dispatch(clearCart());
     navigate("/checkout/finaliza-compra");
   };
 
