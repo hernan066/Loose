@@ -14,6 +14,7 @@ import mini_blanca1 from './img/productos/mini_remera_blanca1.jpg';
 import mini_blanca2 from './img/productos/mini_remera_blanca2.jpg';
 import talles from './img/productos/talles.jpg';
 import modelB from './img/productos/moldeB.png';
+import one_black2 from './img/productos/one_black2.jpg';
 
 
 import logo from './img/logos/LooseB.png';
@@ -42,6 +43,7 @@ export default {
     remeraNegra,
     remeraBlanca,
     modelB,
-    qr_small
+    qr_small,
+    one_black2
    
 }

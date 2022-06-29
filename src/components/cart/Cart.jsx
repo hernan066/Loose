@@ -10,12 +10,12 @@ export const Cart = () => {
   const dispatch = useDispatch();
   const { products, quantity, total } = useSelector((state) => state.cart);
 
-  const handlerDelete = (id) => {
+  const handlerDelete = (id_pro, cantidad, subTotal) => {
     dispatch(
       deleteProduct({
-        id: id,
-        cantidad: quantity,
-        total: total,
+        id_pro,
+        cantidad,
+        subTotal,
       })
     );
   };
@@ -42,7 +42,7 @@ export const Cart = () => {
 
       <h1>MI Carrito</h1>
 
-      {quantity === 0 ? (
+      {products.length === 0 ? (
         <div className="cart__vacio">
           <h2>Tu carrito se encuentra vacio</h2>
           <Link to={"/productos"}>
@@ -76,7 +76,15 @@ export const Cart = () => {
                     </div>
                     <div className="cart__info_borrar">
                       <h3>Borrar</h3>
-                      <p onClick={() => handlerDelete(producto.id)}>
+                      <p
+                        onClick={() =>
+                          handlerDelete(
+                            producto.id_pro,
+                            producto.cantidad,
+                            producto.subTotal
+                          )
+                        }
+                      >
                         <i class="fa-solid fa-x"></i>
                       </p>
                     </div>

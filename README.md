@@ -17,7 +17,9 @@ Este proyecto fue iniciado con Vite.
 Corre la app en development mode.\
 Abrir [http://localhost:3000](http://localhost:3000) para ver en el navegador.
 
-#### Agregando develop
+## Configurando .env
+
+Crea el archivo .env y remplaza su contenido por el de .env.template, y agrega el token de instagram. Luego si el server esta corriendo debe ser reiniciado.
 
 
 

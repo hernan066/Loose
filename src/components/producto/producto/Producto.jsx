@@ -3,10 +3,10 @@ import { datosProductos } from "../../../db/datosProductos";
 import { ProductSlideshow } from "../slider/ProductSlideshow";
 import { useLocation, useNavigate } from "react-router";
 import { motion } from "framer-motion";
-
-import "./producto.css";
 import { useDispatch } from "react-redux";
 import { addProduct } from "../../../redux/cartSlider";
+
+import "./producto.css";
 
 const Producto = () => {
   const [seletSize, setSeletSize] = useState(null);
@@ -41,6 +41,7 @@ const Producto = () => {
       setError(false);
       dispatch(
         addProduct({
+          id_pro: producto.slug + seletSize,
           id: producto.slug,
           nombre: producto.nombre,
           categoria: producto.categoria,
@@ -48,6 +49,7 @@ const Producto = () => {
           imagen: producto.img[0],
           talle: seletSize,
           cantidad: cantidad,
+          subTotal: producto.precio * cantidad,
         })
       );
 

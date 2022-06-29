@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.2",
+    "axios": "^0.27.2",
     "emailjs-com": "^3.2.0",
     "formik": "^2.2.9",
     "framer-motion": "^6.3.4",
