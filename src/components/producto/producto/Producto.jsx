@@ -41,6 +41,7 @@ const Producto = () => {
       setError(false);
       dispatch(
         addProduct({
+          id_pro: producto.slug + seletSize,
           id: producto.slug,
           nombre: producto.nombre,
           categoria: producto.categoria,
@@ -48,6 +49,7 @@ const Producto = () => {
           imagen: producto.img[0],
           talle: seletSize,
           cantidad: cantidad,
+          subTotal: producto.precio * cantidad,
         })
       );
 
