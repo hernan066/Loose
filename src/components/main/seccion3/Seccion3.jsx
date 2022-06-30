@@ -15,10 +15,11 @@ export const Seccion3 = () => {
     new hoverEffect({
       parent: container.current,
       intensity: 0.3,
-      image1: images.remera4,
-      image2: images.remera3,
+      image1: 'https://ik.imagekit.io/mrprwema7/loose/productos/img_sec3_Vt8eK1wCK.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1656550224885',
+      image2: 'https://ik.imagekit.io/mrprwema7/loose/productos/img_sec3_2_aWh2Q7ZsV.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1656550789967',
       displacementImage:
         "https://raw.githubusercontent.com/robin-dela/hover-effect/master/example/img/displacement/1.jpg",
+        imagesRatio:800/550
     });
   }, [container]);
 
@@ -44,9 +45,7 @@ export const Seccion3 = () => {
         </motion.span>
         <motion.div className="seccion__text-p" variants={scrollAnimateUp}>
           <p>
-            I'm a paragraph. Click here to add your own text and edit me. It’s
-            easy. Just click “Edit Text” or double click me to add your own
-            content and make changes to the font.
+          Loose es una marca que se creo para vivir experiencias únicas, ya que se enfoca en un estilo holgado y suelto, para sentirnos libre en cada momento del día.
           </p>
         </motion.div>
 

@@ -19,6 +19,9 @@
   padding-bottom: 50px;
   flex-wrap: wrap;
 }
+.seccion4__card-image img:hover{
+  filter: drop-shadow(-3px 3px 10px rgb(111, 111, 111));
+}
 
 @media screen and (max-width: 550px) {
   .productos__container h1 {

@@ -94,7 +94,7 @@ const Seccion2 = () => {
           variants={scrollAnimateUp}
           viewport={{ once: false, amount: 0.2 }}
         >
-          <img src={images.remera1} alt="remera1" />
+          <img src={imgInstagram[0]?.media_url} alt="remera1" />
         </motion.div>
         <motion.div
           className="container__img-smart-screen-card"
@@ -103,7 +103,7 @@ const Seccion2 = () => {
           variants={scrollAnimateUp}
           viewport={{ once: false, amount: 0.2 }}
         >
-          <img src={images.remera2} alt="remera2" />
+          <img src={imgInstagram[1]?.media_url} alt="remera2" />
         </motion.div>
         <motion.div
           className="container__img-smart-screen-card"
@@ -112,7 +112,7 @@ const Seccion2 = () => {
           variants={scrollAnimateUp}
           viewport={{ once: false, amount: 0.2 }}
         >
-          <img src={images.remera3} alt="remera3" />
+          <img src={imgInstagram[2]?.media_url} alt="remera3" />
         </motion.div>
       </div>
     </section>

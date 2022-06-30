@@ -23,7 +23,7 @@ export const Step2 = () => {
   };
 
   const sendEmail = () => {
-    /* emailjs
+     /* emailjs
       .send(
         "service_i3ypelr",
         "template_gxdfkpe",
@@ -37,7 +37,7 @@ export const Step2 = () => {
         function (error) {
           console.log("FAILED...", error);
         }
-      ); */
+      );  */
     dispatch(clearCart());
     navigate("/checkout/finaliza-compra");
   };

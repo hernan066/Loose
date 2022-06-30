@@ -3,7 +3,7 @@
     height: auto;
     background-color: #fff;
     padding: 40px 20px;
-    margin-top: 60px;
+    /* margin-top: 60px; */
     text-align: center;
 }
 .seccion4__container h2{
@@ -49,12 +49,12 @@
    
 }
 
-.seccion4__container h2{
+/* .seccion4__container h2{
     border-bottom: 1px solid var(--black-color);
     border-top: 1px solid var(--black-color);
   
    
-}
+} */
 
 @media screen and (max-width: 768px){
     .seccion4__container h2{

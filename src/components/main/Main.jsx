@@ -12,9 +12,9 @@ const Main = () => {
       animate={{ opacity: 1, transition: { duration: 1.2 } }}
     >
       <Banner />
-      <Seccion2 />
-      <Seccion3 />
       <Seccion4 />
+      <Seccion3 />
+      <Seccion2 />
     </motion.main>
   );
 };

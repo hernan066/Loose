@@ -13,7 +13,7 @@ const Seccion4 = () => {
         transition={{ staggerChildren: 0.5 }}
         variants={scrollAnimateUp}
       >
-        productos
+        Productos destacados
       </motion.h2>
 
       <motion.div
@@ -31,18 +31,18 @@ const Seccion4 = () => {
         </motion.div>
         <motion.div className="seccion4__card" variants={scrollAnimateUp}>
           <div className="seccion4__card-image">
-            <img src={images.remeraNegra} alt="remera negra" />
+            <img src='https://ik.imagekit.io/mrprwema7/loose/productos/one_black_AGmguoYEi.png?ik-sdk-version=javascript-1.4.3&updatedAt=1656554427362' alt="remera negra" />
           </div>
           <h3>One Black</h3>
         </motion.div>
         <motion.div className="seccion4__card" variants={scrollAnimateUp}>
           <div className="seccion4__card-image">
             <img
-              src="http://vision.centroculturadigital.mx/media/done/1550616316563-QR-GlosarioCCD-cont.png"
-              alt="logo qr"
+              src="https://ik.imagekit.io/mrprwema7/loose/productos/RemeraEze_2QO3tpIeK.png?ik-sdk-version=javascript-1.4.3&updatedAt=1656543654549"
+              alt="Buzo salmon"
             />
           </div>
-          <h3>Codigo QR</h3>
+          <h3>One salmon</h3>
         </motion.div>
       </motion.div>
     </section>

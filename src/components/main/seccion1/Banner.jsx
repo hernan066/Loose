@@ -52,11 +52,17 @@ export const Banner = () => {
 
             <span className="seccion1__text2 loose">Loose</span>
 
-            <img src="https://ik.imagekit.io/mrprwema7/loose/banners/banner2_desktop_NOjQCmPLW.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1656447644676" alt="banner derecha" />
+            <img src="https://ik.imagekit.io/mrprwema7/loose/productos/banner_d_2_a--j7uh38.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1656558152416" alt="banner derecha" />
 
             <motion.div 
             className="seccion1__img2_squat"
             initial={{ x: 3000 }}
+            animate={{ x: 0, transition: { duration: 1, delay: 1.2 } }}
+            
+            ></motion.div>
+            <motion.div 
+            className="seccion1__img2_squat2"
+            initial={{ x: -300 }}
             animate={{ x: 0, transition: { duration: 1, delay: 1.2 } }}
             
             ></motion.div>
