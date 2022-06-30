@@ -1,6 +1,6 @@
 import "./seccion5.css";
 import { TikTok } from "react-tiktok";
-import { scrollAnimateUp } from "../../../utils/animationVariats";
+import { scrollAnimateUp, scrollFadeIn } from "../../../utils/animationVariats";
 import { motion } from "framer-motion";
 
 export const Seccion5 = () => {
@@ -11,9 +11,9 @@ export const Seccion5 = () => {
       initial={"initial"}
       whileInView={"animate"}
       viewport={{ once: false, amount: 0.2 }}
-      variants={scrollAnimateUp}
+      variants={scrollFadeIn}
       >
-        <h1>Nuestro</h1>
+        <h2>Nuestro</h2>
         <div className="seccion5__logo__container">
             <img src="https://ik.imagekit.io/mrprwema7/loose/productos/tiktok_P7fzVivsJ.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1656607069274" alt="logo tiktok" />
         </div>

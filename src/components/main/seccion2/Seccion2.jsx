@@ -1,6 +1,6 @@
 import "./seccion2.css";
 import images from "../../../assets/images";
-import { scrollAnimateUp } from "../../../utils/animationVariats";
+import { scrollAnimateUp, scrollFadeIn } from "../../../utils/animationVariats";
 import { motion } from "framer-motion";
 import axios from "axios";
 import { useEffect } from "react";
@@ -35,12 +35,12 @@ const Seccion2 = () => {
         initial={"initial"}
         whileInView={"animate"}
         viewport={{ once: false, amount: 0.2 }}
-        variants={scrollAnimateUp}
+        variants={scrollFadeIn}
       >
-        <h2 className="seccion2__title">
-          Seguinos en{" "}
+        <h2>Seguinos</h2>
+        <h2>en</h2>
+        <h2 className="seccion2__title__container__instagram">
           <a href="https://www.instagram.com/looseqr" target="blank">
-            {" "}
             Instagram
             <div className="seccion2__logo__container">
               <img
