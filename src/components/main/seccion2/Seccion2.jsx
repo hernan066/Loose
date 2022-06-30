@@ -30,19 +30,28 @@ const Seccion2 = () => {
 
   return (
     <section className="seccion2__container">
-      <motion.h2
+      <motion.div
+        className="seccion2__title__container"
         initial={"initial"}
         whileInView={"animate"}
         viewport={{ once: false, amount: 0.2 }}
         variants={scrollAnimateUp}
-        className="seccion2__title"
       >
-        Seguinos en{" "}
-        <a href="https://www.instagram.com/looseqr" target="blank">
-          {" "}
-          Instagram
-        </a>
-      </motion.h2>
+        <h2 className="seccion2__title">
+          Seguinos en{" "}
+          <a href="https://www.instagram.com/looseqr" target="blank">
+            {" "}
+            Instagram
+            <div className="seccion2__logo__container">
+              <img
+                src="https://ik.imagekit.io/mrprwema7/loose/productos/giphy_I152ORXtR.gif?ik-sdk-version=javascript-1.4.3&updatedAt=1656608339945"
+                alt="logo instagram"
+              />
+            </div>
+          </a>
+        </h2>
+      </motion.div>
+
       <div className="container__slider">
         <motion.div
           className="section2__slider"

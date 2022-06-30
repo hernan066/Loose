@@ -21,6 +21,7 @@ import logo from './img/logos/LooseB.png';
 import remeraBlanca from "./img/productos/RemeraEze.png"
 import remeraNegra from "./img/productos/RemeraEze2.png"
 import qr_small from "./img/qr/qr_small.png"
+import tiktok from './img/logos/tiktok.svg';
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
@@ -44,6 +45,7 @@ export default {
     remeraBlanca,
     modelB,
     qr_small,
-    one_black2
+    one_black2,
+    tiktok
    
 }

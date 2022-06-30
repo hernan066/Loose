@@ -1,0 +1,8 @@
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <symbol id="icon-tiktok" viewBox="0 0 512 512">
+      <title>tiktok</title>
+      <path style="fill: #fff" d="M256,352V32h64c0,32,64,96,128,96v64c-64,0-128-32-128-32V352c0,128-128,128-128,128S64,480,64,352,192,224,192,224c32,0,40,10,40,10v64s-8-10-40-10c0,0-64,0-64,64s64,64,64,64S256,416,256,352Z"/>
+    </symbol>
+  </defs>
+</svg>

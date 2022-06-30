@@ -9,7 +9,7 @@
   :root {
     --black-color: #060606;
     --white-color: #ffffff;
-    --primary-color: #ea5923;
+    --primary-color: rgb(254, 44, 85);
     --font-1: "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-2: 'Oswald', sans-serif;
   }
