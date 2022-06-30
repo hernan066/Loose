@@ -52,7 +52,7 @@ const Navbar = () => {
             <Link to={"/productos"}>Productos</Link>
           </li>
           <li>
-            <a href="#">Contacto</a>
+            <Link to={"/contacto"}>Contacto</Link>
           </li>
           <li>
             <a href="#">Sobre Losse</a>
