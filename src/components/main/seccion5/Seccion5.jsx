@@ -23,7 +23,7 @@ export const Seccion5 = () => {
       className="seccion5__tiktok__container"
       initial={"initial"}
       whileInView={"animate"}
-      viewport={{ once: false, amount: 0.2 }}
+      viewport={{ once: false, amount: 0.1 }}
       variants={scrollAnimateUp}
       >
         <TikTok url="https://www.tiktok.com/@looseqr/video/7115046961404808454" />
