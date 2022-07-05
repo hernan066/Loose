@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
 * {
     padding: 0;
@@ -9,7 +9,7 @@
   :root {
     --black-color: #060606;
     --white-color: #ffffff;
-    --primary-color: rgb(254, 44, 85);
+    --primary-color: #fe2c55;
     --font-1: "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-2: 'Oswald', sans-serif;
   }
@@ -23,4 +23,12 @@
   ul{
     list-style: none;
   }
+
+  .title{
+    font-size: clamp(48px, 7vw + 1rem, 80px);
+    letter-spacing: clamp(3px, 1vw, 7px);
+    font-family: var(--font-2);
+    text-transform: uppercase;
+  }
+  
   

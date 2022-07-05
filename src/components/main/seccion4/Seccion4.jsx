@@ -1,5 +1,4 @@
 import "./seccion4.css";
-import images from "../../../assets/images";
 import { scrollAnimateUp } from "../../../utils/animationVariats";
 import { motion } from "framer-motion";
 
@@ -12,6 +11,7 @@ const Seccion4 = () => {
         viewport={{ once: false, amount: 0.2 }}
         transition={{ staggerChildren: 0.5 }}
         variants={scrollAnimateUp}
+        className='title'
       >
         Productos destacados
       </motion.h2>
@@ -35,7 +35,7 @@ const Seccion4 = () => {
           </div>
           <h3>One Black</h3>
         </motion.div>
-        <motion.div className="seccion4__card" variants={scrollAnimateUp}>
+        <motion.div className="seccion4__card " variants={scrollAnimateUp}>
           <div className="seccion4__card-image">
             <img
               src="https://ik.imagekit.io/mrprwema7/loose/productos/RemeraEze_2QO3tpIeK.png?ik-sdk-version=javascript-1.4.3&updatedAt=1656543654549"
