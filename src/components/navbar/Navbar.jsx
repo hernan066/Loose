@@ -58,7 +58,7 @@ const Navbar = () => {
             <a href="#">Sobre Losse</a>
           </li>
           <li>
-            <a href="#">QR</a>
+          <Link to={"/qr"}>QR</Link>
           </li>
         </motion.ul>
         <div className="hamburger" onClick={handlerClick}>
