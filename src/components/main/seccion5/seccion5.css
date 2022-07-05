@@ -41,6 +41,7 @@
   gap: 5rem;
   flex-wrap: wrap;
 }
+
 @media (max-width: 1050px) {
   .seccion5__title h2 {
     font-size: 80px;
@@ -48,6 +49,11 @@
 }
 
 @media (max-width: 500px) {
+  .tiktok-embed {
+    height: 600px;
+   
+  }
+
   .seccion5__title h2 {
     font-size: 60px;
   }
