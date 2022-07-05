@@ -52,7 +52,7 @@ const Navbar = () => {
             <Link to={"/productos"}>Productos</Link>
           </li>
           <li>
-            <a href="#">Contacto</a>
+            <Link to={"/contacto"}>Contacto</Link>
           </li>
           <li>
             <a href="#">Sobre Losse</a>
@@ -62,7 +62,7 @@ const Navbar = () => {
           </li>
         </motion.ul>
         <div className="hamburger" onClick={handlerClick}>
-          <i class="fa-solid fa-bars"></i>
+          <i className="fa-solid fa-bars"></i>
         </div>
       </div>
     </nav>

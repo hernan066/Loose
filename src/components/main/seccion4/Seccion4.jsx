@@ -1,19 +1,23 @@
 import "./seccion4.css";
-import images from "../../../assets/images";
 import { scrollAnimateUp } from "../../../utils/animationVariats";
 import { motion } from "framer-motion";
+import { datosProductos } from "../../../db/datosProductos";
+import { Link } from "react-router-dom";
 
 const Seccion4 = () => {
+  const filtrados = datosProductos.filter((producto) => producto.destacado);
+
   return (
     <section className="seccion4__container">
       <motion.h2
         initial={"initial"}
         whileInView={"animate"}
-        viewport={{ once: false, amount: 0.2 }}
+        viewport={{ once: false, amount: 0.1 }}
         transition={{ staggerChildren: 0.5 }}
         variants={scrollAnimateUp}
+        className="title"
       >
-        productos
+        Productos destacados
       </motion.h2>
 
       <motion.div
@@ -23,27 +27,22 @@ const Seccion4 = () => {
         viewport={{ once: false, amount: 0.2 }}
         transition={{ staggerChildren: 0.5 }}
       >
-        <motion.div className="seccion4__card" variants={scrollAnimateUp}>
-          <div className="seccion4__card-image">
-            <img src={images.remeraBlanca} alt="remera blanca" />
-          </div>
-          <h3>One White</h3>
-        </motion.div>
-        <motion.div className="seccion4__card" variants={scrollAnimateUp}>
-          <div className="seccion4__card-image">
-            <img src={images.remeraNegra} alt="remera negra" />
-          </div>
-          <h3>One Black</h3>
-        </motion.div>
-        <motion.div className="seccion4__card" variants={scrollAnimateUp}>
-          <div className="seccion4__card-image">
-            <img
-              src="http://vision.centroculturadigital.mx/media/done/1550616316563-QR-GlosarioCCD-cont.png"
-              alt="logo qr"
-            />
-          </div>
-          <h3>Codigo QR</h3>
-        </motion.div>
+        {filtrados.map((producto) => {
+          return (
+            <motion.div
+              className="seccion4__card"
+              variants={scrollAnimateUp}
+              key={producto.slug}
+            >
+              <Link to={`/producto/${producto.slug}`}>
+                <div className="seccion4__card-image">
+                  <img src={producto.img[0]} alt={producto.categoria} />
+                </div>
+              </Link>
+              <h3>{producto.nombre}</h3>
+            </motion.div>
+          );
+        })}
       </motion.div>
     </section>
   );

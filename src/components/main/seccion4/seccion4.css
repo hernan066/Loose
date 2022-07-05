@@ -1,77 +1,39 @@
-.seccion4__container{
-    width: 100%;
-    height: auto;
-    background-color: #fff;
-    padding: 40px 20px;
-    margin-top: 60px;
-    text-align: center;
-}
-.seccion4__container h2{
-    margin-bottom: 60px;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 5rem;
-    letter-spacing: 7px;
-    font-family: var(--font-2);
-    position: relative;
-}
-.seccion4__card-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    flex-wrap: wrap;
+.seccion4__container {
+  background-color: #fff;
+  min-height: 87vh;
+  padding: min(3vw, 1.5rem) min(1vw, 0.5rem);
+  text-align: center;
+  width: 100%;
 }
 
-.seccion4__card-image{
-    width: 500px;
-    min-width: 300px;
-   
-}
-.seccion4__card img{
-    width: 100%;
-   
-}
-.seccion4__card-image{
-    transition: all 0.4s ease;
-    cursor: pointer;
-}
-.seccion4__card-image:hover{
-    transform: scale(1.15);
-
-}
-.seccion4__card h3{
-    text-align: center;
-    font-size: 2rem;
-    font-family: var(--font-2);
-    margin-bottom: 20px;
-    text-transform: uppercase;
-   
+.seccion4__container h2 {
+  margin-bottom: min(3.75rem, 3vw);
+  text-align: center;
 }
 
-.seccion4__container h2{
-    border-bottom: 1px solid var(--black-color);
-    border-top: 1px solid var(--black-color);
-  
-   
+.seccion4__card-container {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
-@media screen and (max-width: 768px){
-    .seccion4__container h2{
-        font-size: 3rem;
-    }
-    .seccion4__card-image{
-        width: 100%;
-    }
-    
-    
+.seccion4__card img {
+  width: 100%;
 }
-@media screen and (max-width: 580px){
-   
-    .seccion4__container{
-        margin-top: 0;
-    }
-    .seccion__text-p{
-        width: 100%;
-    }
+
+.seccion4__card-image {
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.seccion4__card-image:hover {
+  transform: scale(1.15);
+}
+
+.seccion4__card h3 {
+  font-family: var(--font-2);
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
 }
