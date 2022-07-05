@@ -36,7 +36,7 @@ const Footer = () => {
             </div>
 
             <div className="footer__container__links__derecha__arriba__iconos">
-              <a target="blank" href="http://www.tiktok.com">
+              <a target="blank" href="http://www.tiktok.com/@looseqr">
                 <i className="fa-brands fa-tiktok"></i>
               </a>
             </div>
