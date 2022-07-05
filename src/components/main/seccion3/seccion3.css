@@ -46,7 +46,7 @@
 }
 
 .seccion__text-p {
-  width: 400px;
+  max-width: 400px;
   font-family: var(--font-1);
   text-align: center;
   font-size: 1.2rem;

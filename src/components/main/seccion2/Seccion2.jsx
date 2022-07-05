@@ -7,7 +7,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 
 const Seccion2 = () => {
-  //console.log(import.meta.env.VITE_TOKEN_INSTAGRAM)
+ 
   const token = import.meta.env.VITE_TOKEN_INSTAGRAM;
 
   const [imgInstagram, setImgInstagram] = useState([]);
@@ -37,9 +37,9 @@ const Seccion2 = () => {
         viewport={{ once: false, amount: 0.2 }}
         variants={scrollFadeIn}
       >
-        <h2>Seguinos</h2>
-        <h2>en</h2>
-        <h2 className="seccion2__title__container__instagram">
+        <h2 className="title">Seguinos</h2>
+        <h2 className="title">en</h2>
+        <h2 className="seccion2__title__container__instagram title">
           <a href="https://www.instagram.com/looseqr" target="blank">
             Instagram
             <div className="seccion2__logo__container">

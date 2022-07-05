@@ -12,7 +12,7 @@ const Seccion4 = () => {
       <motion.h2
         initial={"initial"}
         whileInView={"animate"}
-        viewport={{ once: false, amount: 0.2 }}
+        viewport={{ once: false, amount: 0.1 }}
         transition={{ staggerChildren: 0.5 }}
         variants={scrollAnimateUp}
         className="title"
