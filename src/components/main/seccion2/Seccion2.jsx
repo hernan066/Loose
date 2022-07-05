@@ -17,7 +17,7 @@ const Seccion2 = () => {
       const resp = await axios.get(
         `https://graph.instagram.com/me/media?fields=thumbnail_url,media_url,caption,permalink&limit=10&access_token=${token}`
       );
-      console.log(resp.data.data);
+     
       setImgInstagram(resp.data.data);
     } catch (error) {
       console.log(error);

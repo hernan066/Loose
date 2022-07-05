@@ -1,8 +1,12 @@
 import "./seccion4.css";
 import { scrollAnimateUp } from "../../../utils/animationVariats";
 import { motion } from "framer-motion";
+import { datosProductos } from "../../../db/datosProductos";
+import { Link } from "react-router-dom";
 
 const Seccion4 = () => {
+  const filtrados = datosProductos.filter((producto) => producto.destacado);
+
   return (
     <section className="seccion4__container">
       <motion.h2
@@ -11,7 +15,7 @@ const Seccion4 = () => {
         viewport={{ once: false, amount: 0.2 }}
         transition={{ staggerChildren: 0.5 }}
         variants={scrollAnimateUp}
-        className='title'
+        className="title"
       >
         Productos destacados
       </motion.h2>
@@ -23,27 +27,22 @@ const Seccion4 = () => {
         viewport={{ once: false, amount: 0.2 }}
         transition={{ staggerChildren: 0.5 }}
       >
-        <motion.div className="seccion4__card" variants={scrollAnimateUp}>
-          <div className="seccion4__card-image">
-            <img src='https://ik.imagekit.io/mrprwema7/loose/productos/one_white_N_PnRIkxf.png?ik-sdk-version=javascript-1.4.3&updatedAt=1656450120986' alt="remera blanca" />
-          </div>
-          <h3>One White</h3>
-        </motion.div>
-        <motion.div className="seccion4__card" variants={scrollAnimateUp}>
-          <div className="seccion4__card-image">
-            <img src='https://ik.imagekit.io/mrprwema7/loose/productos/one_black_AGmguoYEi.png?ik-sdk-version=javascript-1.4.3&updatedAt=1656554427362' alt="remera negra" />
-          </div>
-          <h3>One Black</h3>
-        </motion.div>
-        <motion.div className="seccion4__card " variants={scrollAnimateUp}>
-          <div className="seccion4__card-image">
-            <img
-              src="https://ik.imagekit.io/mrprwema7/loose/productos/RemeraEze_2QO3tpIeK.png?ik-sdk-version=javascript-1.4.3&updatedAt=1656543654549"
-              alt="Buzo salmon"
-            />
-          </div>
-          <h3>One salmon</h3>
-        </motion.div>
+        {filtrados.map((producto) => {
+          return (
+            <motion.div
+              className="seccion4__card"
+              variants={scrollAnimateUp}
+              key={producto.slug}
+            >
+              <Link to={`/producto/${producto.slug}`}>
+                <div className="seccion4__card-image">
+                  <img src={producto.img[0]} alt={producto.categoria} />
+                </div>
+              </Link>
+              <h3>{producto.nombre}</h3>
+            </motion.div>
+          );
+        })}
       </motion.div>
     </section>
   );
