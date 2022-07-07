@@ -1,4 +1,6 @@
 import "./footer.css";
+import { Link } from "react-router-dom";
+
 
 const Footer = () => {
   return (
@@ -7,11 +9,11 @@ const Footer = () => {
       <nav className="footer__container__links">
         <div className="footer__container__links__izquierda">
           <div><a target='blank' href="">Productos</a></div>
-          <div><a target='blank' href="">Tabla de talles</a></div>
-          <div><a target='blank' href="">Como usar el qr</a></div>
+          <div><Link to={'/tabla-talles'}>Tabla de talles</Link></div>
+          <div><Link to={'/qr'}>Como usar el qr</Link></div>
         </div>
         <div className="footer__container__links__centro">
-          <div><a target='blank' href="">Contacto</a></div>
+          <div><Link to={'/contacto'}>Contacto</Link></div>
           <div><a target='blank' href="">Medios de pago</a></div>
           <div><a target='blank' href="">Sobre Loose</a></div>
         </div>
