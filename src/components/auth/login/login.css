@@ -1,0 +1,74 @@
+.login__main {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 87vh;
+  justify-content: center;
+  margin: 0;
+  padding: 1vw;
+}
+
+.login__container {
+  border-radius: 5px;
+  border: 1px solid var(--grey-color);
+  color: var(--black-color);
+  font-family: var(--font-1);
+  font-size: 1rem;
+  max-width: 600px;
+  padding: min(20px,4vw) min(40px, 4vw);
+  text-align: center;
+  
+}
+
+.login__form form input {
+  border: 1px solid var(--grey-color);
+  margin-top: 30px;
+  outline: none;
+  padding: 15px;
+  width: 100%;
+  
+}
+.login__form form button {
+  background-color: var(--black-color);
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  letter-spacing: 4px;
+  margin-top: 30px;
+  padding: 15px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+.login__form form button:hover {
+  box-shadow: 2px 2px 5px #887c7c;
+  transform: scale(1.03);
+}
+.login__register {
+  display: flex;
+  height: 30px;
+  margin-top: 12px;
+  width: 100%;
+}
+.login__register p {
+  color: #887c7c;
+  *flex: 1;
+  font-style: italic;
+  font-weight: 500;
+}
+.login__register a {
+  margin-left: 10px;
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.login__error {
+  color: red;
+  font-size: 12px;
+  position: absolute;
+}
+.login__error-login {
+  color: red;
+  font-size: 12px;
+}
