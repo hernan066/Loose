@@ -2,8 +2,10 @@ import { ErrorMessage, Field, Form, Formik } from "formik";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import * as Yup from "yup";
+import { registerApi } from "../../../api/user";
 
 const SignupSchema = Yup.object().shape({
+  
   username: Yup.string().required("Requerido"),
   email: Yup.string().email("Email invalido").required("Requerido"),
   password: Yup.string().min(6, "6 caracteres minimo").required("Requerido"),
@@ -31,11 +33,13 @@ export const Register = () => {
             }}
             validationSchema={SignupSchema}
             onSubmit={(values, { resetForm }) => {
-              const { username, email, password } = values;
+              registerApi(values);
+
+              /*  const { username, email, password } = values;
               //dispatch(register(username,  email, password));
               register(dispatch, { username, email, password });
 
-              resetForm();
+              resetForm(); */
             }}
           >
             {({ isSubmitting }) => (
@@ -43,11 +47,11 @@ export const Register = () => {
                 <Field
                   type="text"
                   name="username"
-                  placeholder="Ingresa tu nombre"
+                  placeholder="Ingresa un nombre de usuario"
                 />
 
                 <ErrorMessage
-                  name="email"
+                  name="username"
                   component="p"
                   className="login__error"
                 />

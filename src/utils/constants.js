@@ -1,0 +1,1 @@
+export const BASE_PATH = "https://agile-ridge-65799.herokuapp.com"
