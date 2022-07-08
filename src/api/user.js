@@ -17,7 +17,7 @@ export async function registerApi(userData) {
 
     const resp = await fetch(url, params);
     const result = await resp.json();
-    console.log(result);
+    return result;
   } catch (error) {
     console.log(error);
     return null;

@@ -28,23 +28,7 @@
   width: 100%;
   
 }
-.login__form form button {
-  background-color: var(--black-color);
-  border: none;
-  color: white;
-  cursor: pointer;
-  font-size: 15px;
-  letter-spacing: 4px;
-  margin-top: 30px;
-  padding: 15px;
-  text-transform: uppercase;
-  transition: all 0.3s ease;
-  width: 100%;
-}
-.login__form form button:hover {
-  box-shadow: 2px 2px 5px #887c7c;
-  transform: scale(1.03);
-}
+
 .login__register {
   display: flex;
   height: 30px;
@@ -72,3 +56,56 @@
   color: red;
   font-size: 12px;
 }
+
+/*-------------- boton con loading---------------- */
+
+.btn-load {
+    background-color: var(--black-color);
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    letter-spacing: 4px;
+    margin-top: 30px;
+    padding: 15px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    width: 100%;
+    position: relative;
+  }
+  .btn-load:hover {
+    box-shadow: 2px 2px 5px #887c7c;
+    transform: scale(1.03);
+  }
+
+.button--loading .button__text {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+.button--loading::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border: 4px solid transparent;
+    border-top-color: #ffffff;
+    border-radius: 50%;
+    animation: button-loading-spinner 1s ease infinite;
+  }
+  
+  @keyframes button-loading-spinner {
+    from {
+      transform: rotate(0turn);
+    }
+  
+    to {
+      transform: rotate(1turn);
+    }
+  }
+  

@@ -1,4 +1,5 @@
 import { ErrorMessage, Field, Form, Formik } from "formik";
+import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import * as Yup from "yup";
@@ -17,7 +18,24 @@ const SignupSchema = Yup.object().shape({
 
 export const Register = () => {
   const dispatch = useDispatch();
+  const [isLoading, setIsLoading] = useState(false)
 
+  const handleSubmit= async (values)=>{
+    setIsLoading(true);
+    
+    const response = await registerApi(values);
+    
+    console.log(response);
+    
+    if (response?.jwt){
+        console.log("Registro exitoso")
+    }else{
+        console.log("Error en el registro")
+    }
+    
+    setIsLoading(false);
+  }
+  
   return (
     <div className="login__main">
       <div className="login__container">
@@ -32,8 +50,8 @@ export const Register = () => {
               rePassword: "",
             }}
             validationSchema={SignupSchema}
-            onSubmit={(values, { resetForm }) => {
-              registerApi(values);
+            onSubmit=  {(values, { resetForm }) =>  {
+              handleSubmit(values)
 
               /*  const { username, email, password } = values;
               //dispatch(register(username,  email, password));
@@ -89,8 +107,8 @@ export const Register = () => {
                   className="login__error"
                 />
 
-                <button type="submit" disabled={isSubmitting}>
-                  Enviar
+                <button className={`btn-load ${isLoading? 'button--loading':''}`} type="submit" disabled={isLoading}>
+                <span className="button__text">Enviar</span>
                 </button>
               </Form>
             )}
