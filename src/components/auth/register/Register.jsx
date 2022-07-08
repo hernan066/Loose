@@ -1,7 +1,7 @@
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import * as Yup from "yup";
 import { registerApi } from "../../../api/user";
 
@@ -18,6 +18,7 @@ const SignupSchema = Yup.object().shape({
 
 export const Register = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(false)
 
   const handleSubmit= async (values)=>{
@@ -29,6 +30,7 @@ export const Register = () => {
     
     if (response?.jwt){
         console.log("Registro exitoso")
+        navigate('/')
     }else{
         console.log("Error en el registro")
     }
@@ -51,8 +53,8 @@ export const Register = () => {
             }}
             validationSchema={SignupSchema}
             onSubmit=  {(values, { resetForm }) =>  {
-              handleSubmit(values)
-
+              handleSubmit(values);
+              resetForm();
               /*  const { username, email, password } = values;
               //dispatch(register(username,  email, password));
               register(dispatch, { username, email, password });

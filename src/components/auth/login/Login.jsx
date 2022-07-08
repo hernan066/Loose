@@ -5,7 +5,7 @@ import * as Yup from "yup";
 import { useDispatch } from "react-redux";
 
 const SignupSchema = Yup.object().shape({
-  email: Yup.string().email("Email invalido").required("Requerido"),
+    identifier: Yup.string().email("Email invalido").required("Requerido"),
   password: Yup.string()
     .min(6, "6 caracteres minimo")
 
@@ -22,12 +22,12 @@ export const Login = () => {
           <h2 className="title">Login</h2>
 
           <Formik
-            initialValues={{ email: "", password: "" }}
+            initialValues={{ identifier: "", password: "" }}
             validationSchema={SignupSchema}
             onSubmit={(values, { resetForm }) => {
-              const { email, password } = values;
+              /* const { email, password } = values; */
               //dispatch(starLogin(values));
-              login(dispatch, { email, password });
+              /* login(dispatch, { identifier, password }) */;
 
               resetForm();
             }}
@@ -36,12 +36,12 @@ export const Login = () => {
               <Form>
                 <Field
                   type="email"
-                  name="email"
+                  name="identifier"
                   placeholder="Ingresa tu correo"
                 />
 
                 <ErrorMessage
-                  name="email"
+                  name="identifier"
                   component="p"
                   className="login__error"
                 />
