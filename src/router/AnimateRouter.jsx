@@ -13,6 +13,7 @@ import { PageProductos } from "../pages/PageProductos";
 import { PageCart } from "../pages/PageCart";
 import { PageLogin } from "../pages/PageLogin";
 import { PageRegister } from "../pages/PageRegister";
+import { PageUser } from "../pages/PageUser";
 
 
 export const AnimateRouter = () => {
@@ -36,6 +37,7 @@ export const AnimateRouter = () => {
         
         <Route path="/auth/login" element={<PageLogin />} />
         <Route path="/auth/register" element={<PageRegister />} />
+        <Route path="/usuario" element={<PageUser />} />
       </Routes>
     </AnimatePresence>
   );

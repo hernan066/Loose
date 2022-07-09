@@ -37,7 +37,7 @@
   justify-content: center;
 }
 
- .nav__list a {
+.nav__list a {
   color: rgb(246, 244, 244);
   text-decoration: none;
   padding: 7px 15px;
@@ -61,21 +61,61 @@
 }
 
 .nav__list a.current,
-.nav__list a:hover {
+.nav__list a:hover,
+.nav__list a .user-icon:hover {
   color: #636364;
-} 
+  border-color: #636364;
+}
+.nav__list a .user-icon {
+  transition: all 0.3s ease-in-out;
+}
 
-.hamburger{
+.hamburger {
   color: var(--white-color);
   font-size: 30px;
   display: none;
 }
+.fa-circle-user,
+.fa-cart-shopping {
+  font-size: 25px;
+}
+.shopping__cart {
+  position: relative;
+}
+.shopping__cart-count {
+  align-items: center;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  color: var(--white-color);
+  display: flex;
+  font-size: 11px;
+  height: 18px;
+  justify-content: center;
+  position: absolute;
+  right: 5px;
+  top: -12px;
+  width: 18px;
+}
+.user-icon {
+  align-items: center;
+  border-radius: 50%;
+  border: 2px solid var(--white-color);
+  color: var(--white-color);
+  display: flex;
+  font-family: var(--font-1);
+  font-weight: 700;
+  height: 35px;
+  justify-content: center;
+  margin-right: 10px;
+  text-transform: uppercase;
+  width: 35px;
+}
 
+.text-user-icon {
+  font-size: 20px;
+}
 
 /* //////////////////////animate hamburger icon//////////////////////////// */
-
-
-
 
 @media screen and (max-width: 768px) {
   .nav .nav__list {
@@ -85,18 +125,11 @@
     display: block;
   }
   .nav__container {
-   
     padding: 0 1rem;
-   
   }
 }
 @media screen and (min-width: 900px) {
-  
   .nav__container {
-   
     padding: 0 2rem;
-   
   }
 }
-
-

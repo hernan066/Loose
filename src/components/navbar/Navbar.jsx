@@ -8,12 +8,15 @@ import { MobileMenu } from "../mobileMenu/MobileMenu";
 
 const Navbar = () => {
   const { hambugerMenu } = useSelector((state) => state.ui);
+  const { products } = useSelector((state) => state.cart);
+  const { currentUser } = useSelector((state) => state.user);
 
   const dispatch = useDispatch();
 
   const handlerClick = () => {
     dispatch(openHambugerMenu());
   };
+  const letter = currentUser?.username?.split(" ")[0]?.charAt(0);
 
   return (
     <nav className="nav">
@@ -40,10 +43,10 @@ const Navbar = () => {
 
         <motion.ul
           className="nav__list"
-          initial={{ opacity: 0, x: 100 }}
+          initial={{ opacity: 0, y: 50 }}
           animate={{
             opacity: 1,
-            x: 0,
+            y: 0,
             transition: { duration: 0.5, delay: 1.2 },
           }}
           exit={{ opacity: 0 }}
@@ -58,7 +61,45 @@ const Navbar = () => {
             <a href="#">Sobre Losse</a>
           </li>
           <li>
-          <Link to={"/qr"}>QR</Link>
+            <Link to={"/qr"}>QR</Link>
+          </li>
+        </motion.ul>
+        <motion.ul
+          className="nav__list"
+          initial={{ opacity: 0, x: 100 }}
+          animate={{
+            opacity: 1,
+            x: 0,
+            transition: { duration: 0.5, delay: 1.2 },
+          }}
+          exit={{ opacity: 0 }}
+        >
+          {currentUser === null ? (
+            <li>
+              <Link to={"/auth/login"}>
+                <div className="user-icon">
+                  <i class="fa-solid fa-user"></i>
+                </div>
+              </Link>
+            </li>
+          ) : (
+            <li>
+              <Link to={"/usuario"}>
+                <div className="user-icon text-user-icon">{letter}</div>
+              </Link>
+            </li>
+          )}
+
+          <li className="shopping__cart">
+            {products.length !== 0 ? (
+              <div className="shopping__cart-count">
+                <p>{products.length}</p>
+              </div>
+            ) : null}
+
+            <Link to={"/carrito"}>
+              <i className="fa-solid fa-cart-shopping"></i>
+            </Link>
           </li>
         </motion.ul>
         <div className="hamburger" onClick={handlerClick}>
