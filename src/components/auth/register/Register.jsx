@@ -26,15 +26,24 @@ export const Register = () => {
 
     const response = await registerApi(values);
 
-    console.log(response);
+    //console.log(response);
 
     if (response?.jwt) {
+      dispatch(
+        login({
+          id: response.user.id,
+          username: response.user.username,
+          email: response.user.email,
+          jwt: response.jwt,
+        })
+      );
+
       setError(false);
-      console.log("Registro exitoso");
+      //console.log("Registro exitoso");
       navigate("/");
     } else {
       setError(true);
-      console.log("Error en el registro");
+      //console.log("Error en el registro");
     }
 
     setIsLoading(false);
@@ -61,11 +70,6 @@ export const Register = () => {
             onSubmit={(values, { resetForm }) => {
               handleSubmit(values);
               resetForm();
-              /*  const { username, email, password } = values;
-              //dispatch(register(username,  email, password));
-              register(dispatch, { username, email, password });
-
-              resetForm(); */
             }}
           >
             {({ isSubmitting }) => (

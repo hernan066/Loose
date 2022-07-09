@@ -5,6 +5,7 @@ import * as Yup from "yup";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
 import { loginApi } from "../../../api/user";
+import { login } from "../../../redux/userSlice";
 
 const SignupSchema = Yup.object().shape({
   email: Yup.string().email("Email invalido").required("Requerido"),
@@ -25,15 +26,24 @@ export const Login = () => {
 
     const response = await loginApi(values);
 
-    console.log(response);
+    //console.log(response);
 
     if (response?.jwt) {
+      dispatch(
+        login({
+          id: response.user.id,
+          username: response.user.username,
+          email: response.user.email,
+          jwt: response.jwt,
+        })
+      );
+
       setError(false);
-      console.log("Login exitoso");
+      //console.log("Login exitoso");
       navigate("/");
     } else {
       setError(true);
-      console.log("Error en el login");
+      //console.log("Error en el login");
     }
 
     setIsLoading(false);
@@ -52,10 +62,6 @@ export const Login = () => {
             initialValues={{ email: "", password: "" }}
             validationSchema={SignupSchema}
             onSubmit={(values, { resetForm }) => {
-              /* const { email, password } = values; */
-              //dispatch(starLogin(values));
-              /* login(dispatch, { identifier, password }) */
-
               handleSubmit(values);
               resetForm();
             }}
