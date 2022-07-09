@@ -6,7 +6,6 @@ import * as Yup from "yup";
 import { registerApi } from "../../../api/user";
 
 const SignupSchema = Yup.object().shape({
-  
   username: Yup.string().required("Requerido"),
   email: Yup.string().email("Email invalido").required("Requerido"),
   password: Yup.string().min(6, "6 caracteres minimo").required("Requerido"),
@@ -19,31 +18,38 @@ const SignupSchema = Yup.object().shape({
 export const Register = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const [isLoading, setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(false);
 
-  const handleSubmit= async (values)=>{
+  const handleSubmit = async (values) => {
     setIsLoading(true);
-    
+
     const response = await registerApi(values);
-    
+
     console.log(response);
-    
-    if (response?.jwt){
-        console.log("Registro exitoso")
-        navigate('/')
-    }else{
-        console.log("Error en el registro")
+
+    if (response?.jwt) {
+      setError(false);
+      console.log("Registro exitoso");
+      navigate("/");
+    } else {
+      setError(true);
+      console.log("Error en el registro");
     }
-    
+
     setIsLoading(false);
-  }
-  
+  };
+
   return (
     <div className="login__main">
       <div className="login__container">
         <div className="login__form">
           <h2 className="title">Registrate</h2>
-
+          {error && (
+            <p className="login__error">
+              Error en el registro, intentelo nuevamente
+            </p>
+          )}
           <Formik
             initialValues={{
               username: "",
@@ -52,7 +58,7 @@ export const Register = () => {
               rePassword: "",
             }}
             validationSchema={SignupSchema}
-            onSubmit=  {(values, { resetForm }) =>  {
+            onSubmit={(values, { resetForm }) => {
               handleSubmit(values);
               resetForm();
               /*  const { username, email, password } = values;
@@ -109,8 +115,12 @@ export const Register = () => {
                   className="login__error"
                 />
 
-                <button className={`btn-load ${isLoading? 'button--loading':''}`} type="submit" disabled={isLoading}>
-                <span className="button__text">Enviar</span>
+                <button
+                  className={`btn-load ${isLoading ? "button--loading" : ""}`}
+                  type="submit"
+                  disabled={isLoading}
+                >
+                  <span className="button__text">Enviar</span>
                 </button>
               </Form>
             )}
