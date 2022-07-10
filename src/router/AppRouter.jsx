@@ -1,16 +1,10 @@
-import { HashRouter, Routes, Route, useLocation } from "react-router-dom";
-import Home from "../pages/Home";
-import PageProducto from "../pages/PageProducto";
+import { HashRouter } from "react-router-dom";
 import { AnimateRouter } from "./AnimateRouter";
 
-
 const AppRouter = () => {
-  
-  
-  
   return (
     <HashRouter>
-        <AnimateRouter />
+      <AnimateRouter />
     </HashRouter>
   );
 };

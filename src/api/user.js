@@ -1,4 +1,5 @@
 import { BASE_PATH } from "../utils/constants";
+import { authFetch } from "../utils/fetch";
 
 export async function registerApi(userData) {
   try {
@@ -43,6 +44,15 @@ export async function loginApi(userData) {
     return result;
   } catch (error) {
     console.log(error);
+    return null;
+  }
+}
+export async function getMeApi(token, logout){
+  try {
+    const url = `${BASE_PATH}/api/users/me`;
+    const result = await authFetch(token, url, null, logout);
+    return result ? result : null;
+  } catch (error) {
     return null;
   }
 }

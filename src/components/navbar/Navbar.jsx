@@ -78,7 +78,7 @@ const Navbar = () => {
             <li>
               <Link to={"/auth/login"}>
                 <div className="user-icon">
-                  <i class="fa-solid fa-user"></i>
+                  <i className="fa-solid fa-user"></i>
                 </div>
               </Link>
             </li>
