@@ -58,7 +58,7 @@ export const User = () => {
               className={userMenu === "mis-direcciones" ? "active" : ""}
               onClick={() => handlerMenu("mis-direcciones")}
             >
-              Mis direcciones
+              Mi direccion
             </li>
             <li
               className={userMenu === "mis-datos" ? "active" : ""}

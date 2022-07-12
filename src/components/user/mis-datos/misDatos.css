@@ -8,3 +8,9 @@
 .user__data__main__card.full{
     width: 100%;
 }
+.user__data__main__card.full span{
+    color: var(--primary-color);
+    margin-right: 1rem ;
+    cursor: pointer;
+    font-family: var(--font-2);
+}
