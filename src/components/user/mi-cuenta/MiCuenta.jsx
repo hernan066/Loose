@@ -35,30 +35,7 @@ export const MiCuenta = () => {
         </div>
       </div>
       <div className="user__data__main">
-        <div className="user__data__main__mis-datos">
-          <h3>Mis direcciones</h3>
-          <div className="user__data__main-container">
-            <div className="user__data__main__card">
-              <h4>Dirección de facturación</h4>
-              <p className="user__data__text">
-                Aún no guardaste una dirección de facturación.
-              </p>
-
-              <Link to={"/"}>
-                <i className="fa-regular fa-pen-to-square"></i>Editar
-              </Link>
-            </div>
-            <div className="user__data__main__card">
-              <h4>Dirección de envío</h4>
-              <p className="user__data__text">
-                Aún no guardaste una dirección de envío.
-              </p>
-              <Link to={"/"}>
-                <i className="fa-regular fa-pen-to-square"></i>Editar
-              </Link>
-            </div>
-          </div>
-        </div>
+        <Direccion />
       </div>
     </article>
   );

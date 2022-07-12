@@ -14,7 +14,7 @@ export const User = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { currentUser } = useSelector((state) => state.user);
-  const [userMenu, setUserMenu] = useState("mi-cuenta");
+  const [userMenu, setUserMenu] = useState("mis-datos");
   const token = currentUser?.jwt;
   const id = currentUser?.id;
 
@@ -42,12 +42,13 @@ export const User = () => {
         <aside className="user__data__menu">
           <h3>Menu</h3>
           <ul>
-            <li
-              className={userMenu === "mi-cuenta" ? "active" : ""}
-              onClick={() => handlerMenu("mi-cuenta")}
+          <li
+              className={userMenu === "mis-datos" ? "active" : ""}
+              onClick={() => handlerMenu("mis-datos")}
             >
-              Mi cuenta
+              Mis datos
             </li>
+            
             <li
               className={userMenu === "pedidos" ? "active" : ""}
               onClick={() => handlerMenu("pedidos")}
@@ -60,12 +61,7 @@ export const User = () => {
             >
               Mi direccion
             </li>
-            <li
-              className={userMenu === "mis-datos" ? "active" : ""}
-              onClick={() => handlerMenu("mis-datos")}
-            >
-              Mis datos
-            </li>
+           
             <li onClick={handlerLogout}>
               <i className="fa-solid fa-arrow-right-from-bracket"></i> Salir
             </li>
