@@ -14,6 +14,8 @@ import { PageCart } from "../pages/PageCart";
 import { PageLogin } from "../pages/PageLogin";
 import { PageRegister } from "../pages/PageRegister";
 import { PageUser } from "../pages/PageUser";
+import { PrivateRoute } from "./PrivateRoute";
+import { PublicRoute } from "./PublicRoute";
 
 
 export const AnimateRouter = () => {
@@ -35,10 +37,31 @@ export const AnimateRouter = () => {
         <Route path="/tabla-talles" element={<TablaTalles />} />
         <Route path="/carrito" element={<PageCart />} />
         
-        <Route path="/auth/login" element={<PageLogin />} />
-        <Route path="/auth/register" element={<PageRegister />} />
-        <Route path="/usuario" element={<PageUser />} />
+        <Route path="/usuario" element={
+                    <PrivateRoute>
+                        <PageUser />
+                    </PrivateRoute>
+                } />
+
+        <Route path="/auth/login" element={ 
+                    <PublicRoute>
+                        <PageLogin />
+                    </PublicRoute>
+                 } />
+                        
+        <Route path="/auth/register" element={ 
+                    <PublicRoute>
+                        <PageRegister />
+                    </PublicRoute>
+                 } /> 
+        
       </Routes>
     </AnimatePresence>
   );
 };
+        
+        
+
+
+
+
