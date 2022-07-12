@@ -1,0 +1,10 @@
+.user__mis-datos__container{
+    max-width: 800px;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.user__data__main__card.full{
+    width: 100%;
+}

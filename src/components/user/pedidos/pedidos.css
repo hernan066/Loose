@@ -1,0 +1,19 @@
+.user__pedidos__container{
+    max-width: 800px;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.pedidos{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.user__data__main__card.pedidos p{
+    font-family: var(--font-1);
+}
+.user__data__main__card.pedidos p i{
+    color: var(--primary-color);
+}

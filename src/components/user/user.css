@@ -1,7 +1,65 @@
-.user__container{
-    min-height: 87vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.user__container {
+  min-height: 87vh;
+  width: 100%;
+}
+.user__container h2 {
+  text-align: center;
+}
+
+.user__data {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+.user__data__menu {
+  max-width: 300px;
+  width: 20%;
+  border: 1px solid var(--black-color);
+  padding: 0 20px;
+  
+}
+.user__data__menu h3 {
+  font-family: var(--font-2);
+  font-size: 22px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--black-color);
+}
+.user__data__menu ul {
+  padding: 10px 0;
+}
+.user__data__menu ul li a {
+  padding: 8px 18px 8px 0px;
+  display: block;
+  font-family: var(--font-2);
+  font-weight: 500;
+  font-size: 18px;
+  position: relative;
+  transition: all 0.3s ease;
+  color: var(--black-color);
+}
+.user__data__menu ul li {
+  padding: 8px 18px 8px 0px;
+  display: block;
+  font-family: var(--font-2);
+  font-weight: 500;
+  font-size: 18px;
+  position: relative;
+}
+.user__data__menu ul li:hover {
+  color: var(--primary-color);
+  cursor: pointer;
+}
+.user__data__menu ul li.active::before {
+  content: "";
+  height: 100%;
+  background-color: var(--primary-color);
+  width: 5px;
+  position: absolute;
+  top: 0;
+  left: -20px;
+}
+.user__data__menu ul li.active {
+  color: var(--primary-color);
 }

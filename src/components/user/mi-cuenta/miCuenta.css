@@ -1,0 +1,46 @@
+.user__mi-cuenta__container {
+    max-width: 800px;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .user__data__main {
+      border: 1px solid var(--black-color);
+    padding: 20px;
+    
+  }
+  .user__data__main h3 {
+    font-family: var(--font-2);
+    font-size: 22px;
+  }
+  .user__data__main h4 {
+    font-family: var(--font-2);
+  }
+  .user__data__text {
+    color: #585858;
+    font-family: var(--font-1);
+  }
+  .user__data__main a {
+    font-family: var(--font-2);
+    color: var(--primary-color);
+    margin-right: 15px;
+  }
+  
+  .user__data__main-container {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1rem 0;
+  }
+  
+  .user__data__main__card {
+    width: 50%;
+    border: 1px solid var(--dark-grey-color);
+    min-height: 150px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 5px;
+  }
+  

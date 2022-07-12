@@ -10,6 +10,7 @@
     --black-color: #060606;
     --white-color: #ffffff;
     --grey-color: #ccc;
+    --dark-grey-color: #6d6d6d;
     --primary-color: #fe2c55;
     --font-1: "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-2: 'Oswald', sans-serif;
@@ -31,5 +32,6 @@
     font-family: var(--font-2);
     text-transform: uppercase;
   }
+  
   
   

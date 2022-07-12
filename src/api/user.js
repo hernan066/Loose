@@ -35,7 +35,6 @@ export async function loginApi(userData) {
       body: JSON.stringify({
         identifier: userData.email,
         password: userData.password,
-       
       }),
     };
 
@@ -47,12 +46,34 @@ export async function loginApi(userData) {
     return null;
   }
 }
-export async function getMeApi(token, logout){
+export async function getMeApi(token, logout) {
   try {
-    const url = `${BASE_PATH}/api/users/me`;
+    const url = `${BASE_PATH}/api/users/me?populate=direccion`;
     const result = await authFetch(token, url, null, logout);
     return result ? result : null;
   } catch (error) {
+    return null;
+  }
+}
+
+export async function addDirection(token, userData) {
+  try {
+    const url = `${BASE_PATH}/api/direccions`;
+    const params = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+
+      body: JSON.stringify({ data: userData, }),
+    };
+
+    const resp = await fetch(url, params);
+    const result = await resp.json();
+    return result;
+  } catch (error) {
+    console.log(error);
     return null;
   }
 }
