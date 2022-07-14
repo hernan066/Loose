@@ -127,7 +127,7 @@ export const Step1 = () => {
                   className="login__error"
                 />
                 <Field
-                  type="text"
+                  type="number"
                   name="codigoPostal"
                   placeholder="Codigo postal"
                 />
